@@ -1,0 +1,48 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+}
+.setup{
+    width: 99%;
+    background-color: bisque;
+}
+.setup2{
+    background-color: chocolate;
+    display: inline-block;
+}
+#title{
+    height: 75px;
+    border: solid black 3px;
+}
+#progressBarAndClickButton{
+    height: 85px;
+    border: solid black 3px;
+}
+#narratorTextBox{
+    height: 75px;
+    border: solid black 3px;
+}
+#allBoards{
+    height: 60%;
+    border: solid black 3px;
+}
+#allBoards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#statsBoard{
+    width: 30%;
+    height: 90%;
+}
+#taskBoard{
+    width: 30%;
+    height: 90%;
+}
+#formularBoard{
+    width: 30%;
+    height: 90%;
+}
