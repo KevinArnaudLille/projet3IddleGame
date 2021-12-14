@@ -8,17 +8,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <div id="title" class="setup"></div>
-      <div id="progressBarAndClickButton" class="setup"></div>
-      <div id="narratorTextBox" class="setup">
-        <div id="narratorTextPlace"></div>
-        <button onclick="addText()">Clique batard</button>
+    <div id="title" class="setup"></div>
+    <div id="progressBarAndClickButton" class="setup"></div>
+    <div id="narratorTextBox" class="setup">
+      <div id="narratorTextPlace"></div>
+      <button onclick="addText()">Clique stp</button>
+    </div>
+    <div id="allBoards" class="setup">
+      <div id="statsBoard" class="setup2">
+        <div class="encadrer-un-contenu" id="numberTest1">10</div>
+        <div class="encadrer-un-contenu" id="numberTest2">11</div>
+        <div class="encadrer-un-contenu">
+          Crypto
+          <div class="cryptoIndicators" id="numberTest3">12</div>
+          <div class="cryptoIndicators" id="numberTest4">13</div>
+          <div class="cryptoIndicators" id="numberTest5">14</div>
+          <div class="cryptoIndicators" id="numberTest6">15</div>
+        </div>
+        <div class="encadrer-un-contenu" id="numberTest7">16</div>
+        <button onclick="addNumbersStats()">+10</button>
       </div>
-      <div id="allBoards" class="setup">
-        <div id="statsBoard" class="setup2"></div>
-        <div id="taskBoard" class="setup2"></div>
-        <div id="formularBoard" class="setup2"></div>
+      <div id="taskBoard" class="setup2">
+      <button class="shopBuyable" onclick="addProcessorLevel()">Processeur +1</button>
+      <button class="shopBuyable" onclick="addRamLevel()">RAM +1</button>
+      <button class="shopBuyable" onclick="addHardwareLevel()">Disque Dur +1</button>
+      <button class="shopBuyable" onclick="addGraphicCardLevel()">Carte Graphique +1</button>
       </div>
-      <script src="concept.js"></script>
+      <div id="formularBoard" class="setup2"></div>
+    </div>
+    <script src="concept.js"></script>
   </body>
 </html>

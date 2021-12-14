@@ -1,55 +1,80 @@
-html,body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: beige;
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: beige;
 }
-.setup{
-    width: 99%;
-    background-color: bisque;
+.setup {
+  width: 99%;
+  background-color: bisque;
 }
-.setup2{
-    background-color: chocolate;
-    display: inline-block;
+.setup2 {
+  background-color: chocolate;
+  display: inline-block;
 }
-#title{
-    height: 10%;
+#title {
+  height: 10%;
 }
-#progressBarAndClickButton{
-    height: 12%;
-    background-color: royalblue;
+#progressBarAndClickButton {
+  height: 12%;
+  background-color: royalblue;
 }
-#narratorTextBox{
-    height: 12%;
-    display: flex;
+#narratorTextBox {
+  height: 12%;
+  display: flex;
 }
-#allBoards{
-    height: 64%;
+#allBoards {
+  height: 64%;
 }
-#allBoards{
+#allBoards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#statsBoard {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: column;
+  width: 15%;
+  height: 90%;
+}
+#taskBoard {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
+    flex-direction: column;
+  width: 57%;
+  height: 90%;
 }
-#statsBoard{
-    width: 30%;
-    height: 90%;
+#formularBoard {
+  width: 25%;
+  height: 90%;
 }
-#taskBoard{
-    width: 30%;
-    height: 90%;
+#narratorTextPlace {
+  overflow: auto;
+  width: 80%;
+  height: 100%;
 }
-#formularBoard{
-    width: 30%;
-    height: 90%;
+.encadrer-un-contenu {
+  border: 1px solid black;
+  padding: 5px;
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin: 5px;
 }
-#narratorTextPlace{
-    overflow: auto;
-    width: 80%;
-    height: 100%;
+.cryptoIndicators {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+.shopBuyable {
+    width: 20%;
 }
