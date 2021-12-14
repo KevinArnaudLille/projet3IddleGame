@@ -14,21 +14,18 @@ html,body{
     display: inline-block;
 }
 #title{
-    height: 75px;
-    border: solid black 3px;
+    height: 10%;
 }
 #progressBarAndClickButton{
-    height: 85px;
-    border: solid black 3px;
+    height: 12%;
+    background-color: royalblue;
 }
 #narratorTextBox{
-    height: 75px;
-    border: solid black 3px;
+    height: 10%;
     display: flex;
 }
 #allBoards{
     height: 60%;
-    border: solid black 3px;
 }
 #allBoards{
     display: flex;
