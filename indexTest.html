@@ -58,6 +58,14 @@
       margin: 5px;
     }
 
+    #cryptoContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
 
     #tabsButtons {
       overflow: hidden;
@@ -93,6 +101,15 @@
       border: 1px solid #ccc;
       border-top: none;
     }
+
+
+
+    table, td{
+      border: 1px solid #333;
+    }
+    th, td{
+      font-size: 30px;
+    }
   </style>
 </head>
 
@@ -125,7 +142,58 @@
     </div>
   </div>
   <button onclick="addTony()">Ajoutez Tony</button>
-  <script src="tabsContents.js"></script>
+  <div id="cryptoContainer">
+    <br>
+    <table id="cryptoContainer">
+        <tr>
+          <td>Crypto name</td>
+          <td>Current price/u</td>
+          <td>Min./u</td>
+          <td>Mid./u</td>
+          <td>Max./u</td>
+          <td>BUY 1 u</td>
+          <td>SELL 1 u</td>
+        </tr>
+        <tr class="cryptoLines" id="cryptoA">
+          <td id="cryptoAName"></td>
+          <td id="cryptoACurrentPrice"></td>
+          <td id="cryptoAMinPrice"></td>
+          <td id="cryptoAMedPrice"></td>
+          <td id="cryptoAMaxPrice"></td>
+          <td id="cryptoABuyCell"><button id="cryptoABuyButton" onclick="buyCryptoA()">BUY</button></td>
+          <td id="cryptoASellCell"><button id="cryptoASellButton" onclick="sellCryptoA()">SELL</button></td>
+        </tr>
+        <tr class="cryptoLines" id="cryptoB">
+          <td id="cryptoBName"></td>
+          <td id="cryptoBCurrentPrice"></td>
+          <td id="cryptoBMinPrice"></td>
+          <td id="cryptoBMedPrice"></td>
+          <td id="cryptoBMaxPrice"></td>
+          <td id="cryptoBBuyCell"><button id="cryptoBBuyButton" onclick="buyCryptoB()">BUY</button></td>
+          <td id="cryptoBSellCell"><button id="cryptoBSellButton" onclick="sellCryptoB()">SELL</button></td>
+        </tr>
+        <tr class="cryptoLines" id="cryptoC">
+          <td id="cryptoCName"></td>
+          <td id="cryptoCCurrentPrice"></td>
+          <td id="cryptoCMinPrice"></td>
+          <td id="cryptoCMedPrice"></td>
+          <td id="cryptoCMaxPrice"></td>
+          <td id="cryptoCBuyCell"><button id="cryptoCBuyButton" onclick="buyCryptoC()">BUY</button></td>
+          <td id="cryptoCSellCell"><button id="cryptoCSellButton" onclick="sellCryptoC()">SELL</button></td>
+        </tr>
+        <tr class="cryptoLines" id="cryptoD">
+          <td id="cryptoDName"></td>
+          <td id="cryptoDCurrentPrice"></td>
+          <td id="cryptoDMinPrice"></td>
+          <td id="cryptoDMedPrice"></td>
+          <td id="cryptoDMaxPrice"></td>
+          <td id="cryptoDBuyCell"><button id="cryptoDBuyButton" onclick="buyCryptoD()">BUY</button></td>
+          <td id="cryptoDSellCell"><button id="cryptoDSellButton" onclick="sellCryptoD()">SELL</button></td>
+        </tr>
+    </table>
+  </div>
+
+  <script src="data.js"></script>
   <script src="mainTest.js"></script>
 </body>
 
