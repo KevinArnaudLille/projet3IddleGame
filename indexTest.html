@@ -14,50 +14,6 @@
       width: 100vw;
     }
 
-    #progressBarContainer {
-      position: relative;
-      width: 100%;
-      height: 10%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #progressBarBorder {
-      height: 50%;
-      width: 70%;
-      background-color: black;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      border-radius: 5px;
-      padding: 0.5%;
-    }
-
-    #progressBarContent {
-      background-color: purple;
-      height: 90%;
-      color: black;
-      border-radius: 5px;
-
-      display: flex;
-      justify-content: right;
-      align-items: center;
-    }
-
-    #progressText {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: blanchedalmond;
-    }
-
-    #idleBtn {
-      margin: 5px;
-    }
-
     #cryptoContainer {
       display: flex;
       justify-content: center;
@@ -65,131 +21,67 @@
       flex-direction: column;
     }
 
-
-
-    #tabsButtons {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
-
-    /* Style the buttons that are used to open the tab content */
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-    }
-
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-      background-color: #ddd;
-    }
-
-    /* Create an active/current tablink class */
-    .tab button.active {
-      background-color: #ccc;
-    }
-
-    /* Style the tab content */
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-    }
-
-
-
-    table, td{
+    table,
+    td {
       border: 1px solid #333;
     }
-    th, td{
+
+    th,
+    td {
       font-size: 30px;
     }
   </style>
 </head>
 
 <body>
-  <div id="progressBarContainer">
-    <div id="progressBarBorder">
-      <div id="progressBarContent"></div>
-      <div id="progressText">0%</div>
-    </div>
-    <button id="idleBtn">Click</button>
-  </div>
-
-
-  <div id="tabsContainer">
-    <div id="tabsButtons">
-      <button class="tablinks" onclick="openTabs(event, 'London')">London</button>
-      <button class="tablinks" onclick="openTabs(event, 'Paris')">Paris</button>
-    </div>
-
-    <div id="tabsContents">
-      <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-      </div>
-
-      <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-      </div>
-    </div>
-  </div>
-  <button onclick="addTony()">Ajoutez Tony</button>
   <div id="cryptoContainer">
     <br>
     <table id="cryptoContainer">
-        <tr>
-          <td>Crypto name</td>
-          <td>Current price/u</td>
-          <td>Min./u</td>
-          <td>Mid./u</td>
-          <td>Max./u</td>
-          <td>BUY 1 u</td>
-          <td>SELL 1 u</td>
-        </tr>
-        <tr class="cryptoLines" id="cryptoA">
-          <td id="cryptoAName"></td>
-          <td id="cryptoACurrentPrice"></td>
-          <td id="cryptoAMinPrice"></td>
-          <td id="cryptoAMedPrice"></td>
-          <td id="cryptoAMaxPrice"></td>
-          <td id="cryptoABuyCell"><button id="cryptoABuyButton" onclick="buyCryptoA()">BUY</button></td>
-          <td id="cryptoASellCell"><button id="cryptoASellButton" onclick="sellCryptoA()">SELL</button></td>
-        </tr>
-        <tr class="cryptoLines" id="cryptoB">
-          <td id="cryptoBName"></td>
-          <td id="cryptoBCurrentPrice"></td>
-          <td id="cryptoBMinPrice"></td>
-          <td id="cryptoBMedPrice"></td>
-          <td id="cryptoBMaxPrice"></td>
-          <td id="cryptoBBuyCell"><button id="cryptoBBuyButton" onclick="buyCryptoB()">BUY</button></td>
-          <td id="cryptoBSellCell"><button id="cryptoBSellButton" onclick="sellCryptoB()">SELL</button></td>
-        </tr>
-        <tr class="cryptoLines" id="cryptoC">
-          <td id="cryptoCName"></td>
-          <td id="cryptoCCurrentPrice"></td>
-          <td id="cryptoCMinPrice"></td>
-          <td id="cryptoCMedPrice"></td>
-          <td id="cryptoCMaxPrice"></td>
-          <td id="cryptoCBuyCell"><button id="cryptoCBuyButton" onclick="buyCryptoC()">BUY</button></td>
-          <td id="cryptoCSellCell"><button id="cryptoCSellButton" onclick="sellCryptoC()">SELL</button></td>
-        </tr>
-        <tr class="cryptoLines" id="cryptoD">
-          <td id="cryptoDName"></td>
-          <td id="cryptoDCurrentPrice"></td>
-          <td id="cryptoDMinPrice"></td>
-          <td id="cryptoDMedPrice"></td>
-          <td id="cryptoDMaxPrice"></td>
-          <td id="cryptoDBuyCell"><button id="cryptoDBuyButton" onclick="buyCryptoD()">BUY</button></td>
-          <td id="cryptoDSellCell"><button id="cryptoDSellButton" onclick="sellCryptoD()">SELL</button></td>
-        </tr>
+      <tr>
+        <td>Crypto name</td>
+        <td>Current price/u</td>
+        <td>Min./u</td>
+        <td>Mid./u</td>
+        <td>Max./u</td>
+        <td>BUY 1 u</td>
+        <td>SELL 1 u</td>
+      </tr>
+      <tr class="cryptoLines" id="cryptoA">
+        <td id="cryptoAName"></td>
+        <td id="cryptoACurrentPrice"></td>
+        <td id="cryptoAMinPrice"></td>
+        <td id="cryptoAMedPrice"></td>
+        <td id="cryptoAMaxPrice"></td>
+        <td id="cryptoABuyCell"><button id="cryptoABuyButton" onclick="buyCryptoA()">BUY</button></td>
+        <td id="cryptoASellCell"><button id="cryptoASellButton" onclick="sellCryptoA()">SELL</button></td>
+      </tr>
+      <tr class="cryptoLines" id="cryptoB">
+        <td id="cryptoBName"></td>
+        <td id="cryptoBCurrentPrice"></td>
+        <td id="cryptoBMinPrice"></td>
+        <td id="cryptoBMedPrice"></td>
+        <td id="cryptoBMaxPrice"></td>
+        <td id="cryptoBBuyCell"><button id="cryptoBBuyButton" onclick="buyCryptoB()">BUY</button></td>
+        <td id="cryptoBSellCell"><button id="cryptoBSellButton" onclick="sellCryptoB()">SELL</button></td>
+      </tr>
+      <tr class="cryptoLines" id="cryptoC">
+        <td id="cryptoCName"></td>
+        <td id="cryptoCCurrentPrice"></td>
+        <td id="cryptoCMinPrice"></td>
+        <td id="cryptoCMedPrice"></td>
+        <td id="cryptoCMaxPrice"></td>
+        <td id="cryptoCBuyCell"><button id="cryptoCBuyButton" onclick="buyCryptoC()">BUY</button></td>
+        <td id="cryptoCSellCell"><button id="cryptoCSellButton" onclick="sellCryptoC()">SELL</button></td>
+      </tr>
+      <tr class="cryptoLines" id="cryptoD">
+        <td id="cryptoDName"></td>
+        <td id="cryptoDCurrentPrice"></td>
+        <td id="cryptoDMinPrice"></td>
+        <td id="cryptoDMedPrice"></td>
+        <td id="cryptoDMaxPrice"></td>
+        <td id="cryptoDBuyCell"><button id="cryptoDBuyButton" onclick="buyCryptoD()">BUY</button></td>
+        <td id="cryptoDSellCell"><button id="cryptoDSellButton" onclick="sellCryptoD()">SELL</button></td>
+      </tr>
     </table>
   </div>
 

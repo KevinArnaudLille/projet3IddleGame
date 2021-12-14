@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="title" class="setup"></div>
-    <div id="progressBarAndClickButton" class="setup"></div>
-    <div id="narratorTextBox" class="setup">
-      <div id="narratorTextPlace"></div>
-      <button onclick="addText()">Clique stp</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE MEANING OF LIFE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="title" class="globalLayoutSetup"></div>
+  <div id="progressBarAndClickButtonContainer" class="globalLayoutSetup">
+    <div id="progressBarBorder">
+      <div id="progressBarContent"></div>
+      <div id="progressText">0%</div>
     </div>
-    <div id="allBoards" class="setup">
-      <div id="statsBoard" class="setup2">
-        <div class="encadrer-un-contenu" id="numberTest1">10</div>
-        <div class="encadrer-un-contenu" id="numberTest2">11</div>
-        <div class="encadrer-un-contenu">
-          Crypto
-          <div class="cryptoIndicators" id="numberTest3">12</div>
-          <div class="cryptoIndicators" id="numberTest4">13</div>
-          <div class="cryptoIndicators" id="numberTest5">14</div>
-          <div class="cryptoIndicators" id="numberTest6">15</div>
+    <button id="idleBtn">Click</button>
+  </div>
+  <div id="narratorTextBox" class="globalLayoutSetup">
+    <div id="narratorTextPlace"></div>
+    <button onclick="addText()">Clique stp</button>
+  </div>
+  <div id="allBoards" class="globalLayoutSetup">
+    <div id="statsBoard" class="taskboardLayoutSetup">
+      <div class="encadrer-un-contenu" id="numberTest1">10</div>
+      <div class="encadrer-un-contenu" id="numberTest2">11</div>
+      <div class="encadrer-un-contenu">
+        Crypto
+        <div class="cryptoIndicators" id="numberTest3">12</div>
+        <div class="cryptoIndicators" id="numberTest4">13</div>
+        <div class="cryptoIndicators" id="numberTest5">14</div>
+        <div class="cryptoIndicators" id="numberTest6">15</div>
+      </div>
+      <div class="encadrer-un-contenu" id="numberTest7">16</div>
+      <button onclick="addNumbersStats()">+10</button>
+    </div>
+    <div id="taskBoard" class="taskboardLayoutSetup">
+      <div id="tabsContainer">
+        <div id="tabsButtons">
+          <button class='tabLinks' onclick='openTabs(event, `Shop`)'>Shop</button>
+          <button class='tabLinks' onclick='openTabs(event, `Crypto`)'>Crypto</button>
+          <button class='tabLinks' onclick='openTabs(event, `Task`)'>Task</button>
+          <button class='tabLinks' onclick='openTabs(event, `Stats`)'>Stats</button>
         </div>
-        <div class="encadrer-un-contenu" id="numberTest7">16</div>
-        <button onclick="addNumbersStats()">+10</button>
+        <div id="tabsContents">
+          <div id='Shop' class='tabContent'>
+            <button class="shopBuyable" onclick="addProcessorLevel()">Processeur +1</button>
+            <button class="shopBuyable" onclick="addRamLevel()">RAM +1</button>
+            <button class="shopBuyable" onclick="addHardwareLevel()">Disque Dur +1</button>
+            <button class="shopBuyable" onclick="addGraphicCardLevel()">Carte Graphique +1</button>
+          </div>
+          <div id='Crypto' class='tabContent'>
+            <h3>THIS IS THE CRYPTO</h3>
+            <p>Pleins de truc incroyable ici</p>
+          </div>
+          <div id='Task' class='tabContent'>
+            <h3>THIS IS THE TASK</h3>
+            <p>Pleins de truc incroyable ici</p>
+          </div>
+          <div id='Stats' class='tabContent'>
+            <h3>THIS IS THE STATS</h3>
+            <p>Pleins de truc incroyable ici</p>
+          </div>
+        </div>
       </div>
-      <div id="taskBoard" class="setup2">
-      <button class="shopBuyable" onclick="addProcessorLevel()">Processeur +1</button>
-      <button class="shopBuyable" onclick="addRamLevel()">RAM +1</button>
-      <button class="shopBuyable" onclick="addHardwareLevel()">Disque Dur +1</button>
-      <button class="shopBuyable" onclick="addGraphicCardLevel()">Carte Graphique +1</button>
-      </div>
-      <div id="formularBoard" class="setup2"></div>
+
     </div>
-    <script src="concept.js"></script>
-  </body>
+    <div id="formularBoard" class="taskboardLayoutSetup"></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
