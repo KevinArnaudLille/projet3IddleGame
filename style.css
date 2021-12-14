@@ -24,6 +24,7 @@ html,body{
 #narratorTextBox{
     height: 75px;
     border: solid black 3px;
+    display: flex;
 }
 #allBoards{
     height: 60%;
@@ -45,4 +46,9 @@ html,body{
 #formularBoard{
     width: 30%;
     height: 90%;
+}
+#narratorTextPlace{
+    overflow: auto;
+    width: 80%;
+    height: 100%;
 }
