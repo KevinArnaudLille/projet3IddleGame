@@ -1,4 +1,8 @@
 html,body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -21,11 +25,11 @@ html,body{
     background-color: royalblue;
 }
 #narratorTextBox{
-    height: 10%;
+    height: 12%;
     display: flex;
 }
 #allBoards{
-    height: 60%;
+    height: 64%;
 }
 #allBoards{
     display: flex;
