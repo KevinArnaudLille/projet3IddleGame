@@ -50,16 +50,15 @@ function addText() {
 /* ====== Boards section ====== */
 /* -- Statsboard part -- */
 const testNumbers10 = 10;
-function addNumbersStats() {
-  numberTest1.innerHTML = (parseInt(numberTest1.innerHTML) + 10).toString();
-  numberTest2.innerHTML = (parseInt(numberTest2.innerHTML) + 10).toString();
-  numberTest3.innerHTML = (parseInt(numberTest3.innerHTML) + 10).toString();
-  numberTest4.innerHTML = (parseInt(numberTest4.innerHTML) + 10).toString();
-  numberTest5.innerHTML = (parseInt(numberTest5.innerHTML) + 10).toString();
-  numberTest6.innerHTML = (parseInt(numberTest6.innerHTML) + 10).toString();
-  numberTest7.innerHTML = (parseInt(numberTest7.innerHTML) + 10).toString();
+function updateStats() {
+  clickMultiplicator.innerHTML = STATES.clickMultiplicator;
+  clickIncrement.innerHTML = STATES.clickIncrement;
+  currentMoney.innerHTML = STATES.currentMoney;
+  cryptoAInStock.innerHTML = STATES.cryptoAInStock;
+  cryptoBInStock.innerHTML = STATES.cryptoBInStock;
+  cryptoCInStock.innerHTML = STATES.cryptoCInStock;
+  PCPower.innerHTML = STATES.PCPower;
 }
-console.log((parseInt(numberTest1.innerHTML) + 10).toString());
 
 /* -- Taskboard part -- */
 function openTabs(evt, cityName) {
