@@ -21,7 +21,7 @@ let STATES = {
 };
 
 // CRYPTO DATA ================================
-let CryptoData = [
+let cryptoData = [
   {
     "cryptoId" : "cryptoA",
     "cryptoName" : "TonyCoin",

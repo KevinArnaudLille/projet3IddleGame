@@ -2,7 +2,7 @@
 STATES.currentMoney = 400;
 
 /* Crypto tab init */
-for (let crypto of CryptoData) {
+for (let crypto of cryptoData) {
   $(`#${crypto.cryptoId}Name`).innerHTML = crypto.cryptoName;
   $(`#${crypto.cryptoId}CurrentVal`).innerHTML = crypto.cryptoInitCurrentVal;
   $(`#${crypto.cryptoId}MinVal`).innerHTML = crypto.cryptoMinVal;

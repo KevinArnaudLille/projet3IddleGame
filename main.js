@@ -3,6 +3,16 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
+function randn_bm() {
+  let u = 0, v = 0;
+  while (u === 0) u = Math.random(); //Converting [0,1) to (0,1)
+  while (v === 0) v = Math.random();
+  let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  num = num / 10.0 + 0.5; // Translate to 0 -> 1
+  if (num > 1 || num < 0) return randn_bm() // resample between 0 and 1
+  return num
+}
+
 /* ====== Title section ====== */
 
 
@@ -18,7 +28,6 @@ progressText.innerHTML = `
 
 
 function progressBarUpdateByClick() {
-  console.log("is ok");
   STATES.mainBarProgress += (STATES.clickMultiplicator * STATES.clickIncrement);
   progressBarContent.style.cssText = `
   width:${STATES.mainBarProgress}%`;
@@ -86,6 +95,13 @@ function openTabs(evt, cityName) {
 /* Crypto tab */
 
 // Current price update
+function launchCryptoRefresh(){
+  STATES.cryptoACurrentVal = cryptoData[0].cryptoInitCurrentVal;
+ setInterval(()=>{
+   STATES.cryptoACurrentVal = cryptoData[0].cryptoMedVal * Math.random();
+   updateStats();
+ },cryptoData[0].cryptoTimeInterval)
+}
 // $(`#cryptoACurrentPrice`).innerHTML = cryptoACurrentPrice;
 // $(`#cryptoBCurrentPrice`).innerHTML = cryptoBCurrentPrice;
 // $(`#cryptoCCurrentPrice`).innerHTML = cryptoCCurrentPrice;
