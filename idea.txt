@@ -1,7 +1,7 @@
 |-- Global :
 Scripts are organized in 4 files:
 - data.js where are all data as jsons or lists
-- setup.js where are all the functions that make the page living (ex: all the launch function that trigger components appearances)
+- main.js where are all the functions that make the page living (ex: all the launch function that trigger components appearances)
 - progress.js where is the main function that contain the switch that lead the story. A checkpoint value is checked and increment for each case to avoid repetition. Launcher of late component are triggered here.
 - init.js that init and launch the beginning 
 

@@ -11,27 +11,28 @@ let progressBarBorder = $("#progressBarBorder");
 let progressBarContent = $("#progressBarContent");
 let progressText = $("#progressText");
 
-let currentWidth = 0;
 progressBarContent.style.cssText = `
-  width:${currentWidth}%`
+  width:${STATES.mainBarProgress}%`;
 progressText.innerHTML = `
-  ${currentWidth}%`
+  ${STATES.mainBarProgress.toFixed(3)}%`;
 
 
-function progressBarUpdate(idle) {
+function progressBarUpdateByClick() {
+  console.log("is ok");
+  STATES.mainBarProgress += (STATES.clickMultiplicator * STATES.clickIncrement);
+  progressBarContent.style.cssText = `
+  width:${STATES.mainBarProgress}%`;
+  progressText.innerHTML = `
+  ${STATES.mainBarProgress.toFixed(3)}%`;
+};
+
+function progressBarUpdateAuto(idle) {
   console.log(idle);
   progressBarContent.style.cssText = `
   width:${currentWidth += idle}%`
   progressText.innerHTML = `
   ${currentWidth.toFixed(3)}%`
 };
-
-let idleBtn = $("#idleBtn");
-idleBtn.addEventListener('click', () => {
-  progressBarUpdate(1);
-});
-
-setInterval(() => progressBarUpdate(0.01), 10);
 
 /* ====== Narrator Textbox section ====== */
 let narratorTextPlace = $("#narratorTextPlace");
@@ -80,6 +81,75 @@ function openTabs(evt, cityName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+/* Crypto tab */
+
+// Current price update
+// $(`#cryptoACurrentPrice`).innerHTML = cryptoACurrentPrice;
+// $(`#cryptoBCurrentPrice`).innerHTML = cryptoBCurrentPrice;
+// $(`#cryptoCCurrentPrice`).innerHTML = cryptoCCurrentPrice;
+// $(`#cryptoDCurrentPrice`).innerHTML = cryptoDCurrentPrice;
+
+// Crypto Buy and Sell functions
+function buyCryptoA() {
+  if (STATES.currentMoney >= STATES.cryptoACurrentVal) {
+    STATES.cryptoAInStock += 1;
+    STATES.currentMoney -= STATES.cryptoACurrentVal;
+  } else {
+    // Le narrateur dit un truc
+    console.log("nop");
+  }
+}
+
+function sellCryptoA() {
+  if (STATES.cryptoAInStock < 0) {
+    STATES.cryptoAInStock -= 1;
+    STATES.currentMoney += STATES.cryptoACurrentVal;
+  } else {
+    // Le narrateur dit un truc
+    console.log("nop");
+  }
+}
+
+function buyCryptoB() {
+  if (STATES.currentMoney >= STATES.cryptoBCurrentVal) {
+    STATES.cryptoBInStock += 1;
+    STATES.currentMoney -= STATES.cryptoBCurrentVal;
+  } else {
+    // Le narrateur dit un truc
+    console.log("nop");
+  }
+}
+
+function sellCryptoB() {
+  if (STATES.cryptoBInStock < 0) {
+    STATES.cryptoBInStock -= 1;
+    STATES.currentMoney += STATES.cryptoBCurrentVal;
+  } else {
+    // Le narrateur dit un truc
+    console.log("nop");
+  }
+}
+
+function buyCryptoC() {
+  if (STATES.currentMoney >= STATES.cryptoCCurrentVal) {
+    STATES.cryptoCInStock += 1;
+    STATES.currentMoney -= STATES.cryptoCCurrentVal;
+  } else {
+    // Le narrateur dit un truc
+    console.log("nop");
+  }
+}
+
+function sellCryptoC() {
+  if (STATES.cryptoCInStock < 0) {
+    STATES.cryptoCInStock -= 1;
+    STATES.currentMoney += STATES.cryptoCCurrentVal;
+  } else {
+    // Le narrateur dit un truc
+    console.log("nop");
+  }
 }
 
 /* -- Formular part -- */

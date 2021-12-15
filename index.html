@@ -10,13 +10,15 @@
 </head>
 
 <body>
-  <div id="title" class="globalLayoutSetup"></div>
+  <div id="title" class="globalLayoutSetup">
+    <h1>THE MEANING OF LIFE</h1>
+  </div>
   <div id="progressBarAndClickButtonContainer" class="globalLayoutSetup">
     <div id="progressBarBorder">
       <div id="progressBarContent"></div>
       <div id="progressText">0%</div>
     </div>
-    <button id="idleBtn">Click</button>
+    <button id="idleBtn" onclick="progressBarUpdateByClick()">Click</button>
   </div>
   <div id="narratorTextBox" class="globalLayoutSetup">
     <div id="narratorTextPlace"></div>
@@ -52,8 +54,45 @@
             <button class="shopBuyable" onclick="addGraphicCardLevel()">Carte Graphique +1</button>
           </div>
           <div id='Crypto' class='tabContent'>
-            <h3>THIS IS THE CRYPTO</h3>
-            <p>Pleins de truc incroyable ici</p>
+            <div id="cryptoContainer">
+              <table id="cryptoTable">
+                <tr>
+                  <td>Crypto name</td>
+                  <td>Current price</td>
+                  <td>Min.</td>
+                  <td>Mid.</td>
+                  <td>Max.</td>
+                  <td>BUY</td>
+                  <td>SELL</td>
+                </tr>
+                <tr class="cryptoLines" id="cryptoA">
+                  <td id="cryptoAName"></td>
+                  <td id="cryptoACurrentVal"></td>
+                  <td id="cryptoAMinVal"></td>
+                  <td id="cryptoAMedVal"></td>
+                  <td id="cryptoAMaxVal"></td>
+                  <td id="cryptoABuyCell"><button id="cryptoABuyButton" onclick="buyCryptoA()">BUY</button></td>
+                  <td id="cryptoASellCell"><button id="cryptoASellButton" onclick="sellCryptoA()">SELL</button></td>
+                </tr>
+                <tr class="cryptoLines" id="cryptoB">
+                  <td id="cryptoBName"></td>
+                  <td id="cryptoBCurrentVal"></td>
+                  <td id="cryptoBMinVal"></td>
+                  <td id="cryptoBMedVal"></td>
+                  <td id="cryptoBMaxVal"></td>
+                  <td id="cryptoBBuyCell"><button id="cryptoBBuyButton" onclick="buyCryptoB()">BUY</button></td>
+                  <td id="cryptoBSellCell"><button id="cryptoBSellButton" onclick="sellCryptoB()">SELL</button></td>
+                </tr>
+                <tr class="cryptoLines" id="cryptoC">
+                  <td id="cryptoCName"></td>
+                  <td id="cryptoCCurrentVal"></td>
+                  <td id="cryptoCMinVal"></td>
+                  <td id="cryptoCMedVal"></td>
+                  <td id="cryptoCMaxVal"></td>
+                  <td id="cryptoCBuyCell"><button id="cryptoCBuyButton" onclick="buyCryptoC()">BUY</button></td>
+                  <td id="cryptoCSellCell"><button id="cryptoCSellButton" onclick="sellCryptoC()">SELL</button></td>
+              </table>
+            </div>
           </div>
           <div id='Task' class='tabContent'>
             <h3>THIS IS THE TASK</h3>
@@ -71,6 +110,8 @@
   </div>
   <script src="data.js"></script>
   <script src="main.js"></script>
+  <script src="progress.js"></script>
+  <script src="init.js"></script>
 </body>
 
 </html>
