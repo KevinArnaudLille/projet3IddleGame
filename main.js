@@ -36,11 +36,11 @@ function progressBarUpdateByClick() {
 };
 
 function progressBarUpdateAuto(idle) {
-  console.log(idle);
-  progressBarContent.style.cssText = `
-  width:${currentWidth += idle}%`
-  progressText.innerHTML = `
-  ${currentWidth.toFixed(3)}%`
+  // console.log(idle);
+  // progressBarContent.style.cssText = `
+  // width:${currentWidth += idle}%`
+  // progressText.innerHTML = `
+  // ${currentWidth.toFixed(3)}%`
 };
 
 /* ====== Narrator Textbox section ====== */
@@ -58,7 +58,6 @@ function addText() {
 
 /* ====== Boards section ====== */
 /* -- Statsboard part -- */
-const testNumbers10 = 10;
 function updateStats() {
   clickMultiplicator.innerHTML = STATES.clickMultiplicator;
   clickIncrement.innerHTML = STATES.clickIncrement;
@@ -93,18 +92,35 @@ function openTabs(evt, cityName) {
 
 /* Crypto tab */
 
-// Current price update
-function launchCryptoRefresh(){
+// Crypto current price update
+function launchCryptoRefresh() {
+  // crypto A
   STATES.cryptoACurrentVal = cryptoData[0].cryptoInitCurrentVal;
- setInterval(()=>{
-   STATES.cryptoACurrentVal = cryptoData[0].cryptoMedVal * Math.random();
-   updateStats();
- },cryptoData[0].cryptoTimeInterval)
+  setInterval(() => {
+    STATES.cryptoACurrentVal = Math.round(cryptoData[0].cryptoMinVal + ((cryptoData[0].cryptoMaxVal - cryptoData[0].cryptoMinVal) * Math.random()));
+    UpdateCryptoVal();
+  }, cryptoData[0].cryptoTimeInterval);
+
+  // crypto B
+  STATES.cryptoBCurrentVal = cryptoData[1].cryptoInitCurrentVal;
+  setInterval(() => {
+    STATES.cryptoBCurrentVal = Math.round(cryptoData[1].cryptoMinVal + ((cryptoData[1].cryptoMaxVal - cryptoData[1].cryptoMinVal) * randn_bm()));
+    UpdateCryptoVal();
+  }, cryptoData[1].cryptoTimeInterval);
+
+  // crypto C
+  STATES.cryptoCCurrentVal = cryptoData[2].cryptoInitCurrentVal;
+  setInterval(() => {
+    STATES.cryptoCCurrentVal = Math.round(cryptoData[2].cryptoMinVal + ((cryptoData[2].cryptoMaxVal - cryptoData[2].cryptoMinVal) * randn_bm() * Math.random()));
+    UpdateCryptoVal();
+  }, cryptoData[2].cryptoTimeInterval);
 }
-// $(`#cryptoACurrentPrice`).innerHTML = cryptoACurrentPrice;
-// $(`#cryptoBCurrentPrice`).innerHTML = cryptoBCurrentPrice;
-// $(`#cryptoCCurrentPrice`).innerHTML = cryptoCCurrentPrice;
-// $(`#cryptoDCurrentPrice`).innerHTML = cryptoDCurrentPrice;
+
+function UpdateCryptoVal() {
+  $(`#cryptoACurrentVal`).innerHTML = STATES.cryptoACurrentVal;
+  $(`#cryptoBCurrentVal`).innerHTML = STATES.cryptoBCurrentVal;
+  $(`#cryptoCCurrentVal`).innerHTML = STATES.cryptoCCurrentVal;
+}
 
 // Crypto Buy and Sell functions
 function buyCryptoA() {
@@ -114,17 +130,20 @@ function buyCryptoA() {
   } else {
     // Le narrateur dit un truc
     console.log("nop");
-  }
+  };
+  updateStats();
 }
 
 function sellCryptoA() {
-  if (STATES.cryptoAInStock < 0) {
+  if (STATES.cryptoAInStock > 0) {
+    console.log(STATES.cryptoAInStock)
     STATES.cryptoAInStock -= 1;
     STATES.currentMoney += STATES.cryptoACurrentVal;
   } else {
     // Le narrateur dit un truc
     console.log("nop");
-  }
+  };
+  updateStats();
 }
 
 function buyCryptoB() {
@@ -134,17 +153,19 @@ function buyCryptoB() {
   } else {
     // Le narrateur dit un truc
     console.log("nop");
-  }
+  };
+  updateStats();
 }
 
 function sellCryptoB() {
-  if (STATES.cryptoBInStock < 0) {
+  if (STATES.cryptoBInStock > 0) {
     STATES.cryptoBInStock -= 1;
     STATES.currentMoney += STATES.cryptoBCurrentVal;
   } else {
     // Le narrateur dit un truc
     console.log("nop");
-  }
+  };
+  updateStats();
 }
 
 function buyCryptoC() {
@@ -158,7 +179,7 @@ function buyCryptoC() {
 }
 
 function sellCryptoC() {
-  if (STATES.cryptoCInStock < 0) {
+  if (STATES.cryptoCInStock > 0) {
     STATES.cryptoCInStock -= 1;
     STATES.currentMoney += STATES.cryptoCCurrentVal;
   } else {
