@@ -1,7 +1,9 @@
 // TEST FIELD
-STATES.currentMoney = 400;
+STATES.currentMoney = 40000;
 updateStats();
 launchCryptoRefresh();
+updatePackagingNb()
+generateNewPackagingTask()
 MAIN_PROGRESSION()
 
 /* Shop tab init */
@@ -19,6 +21,10 @@ for (let crypto of cryptoData) {
 }
 
 // Packaging task init
-for (let item of packagingItemsStats){
+for (let item of packagingItemsData){
   console.log(item)
+  $(`#${item.itemId}Btn`).innerHTML = `${item.itemName} - ${item.itemVal}$`;
 }
+$(`#boxBtn`).insertAdjacentHTML("beforeend",` + ${packagingItemsData[4].nbOfCarboardsRequired} ${packagingItemsData[0].itemName} + ${packagingItemsData[4].nbOfBubbleWrapsRequired} ${packagingItemsData[1].itemName}`);
+
+$(`#caseBtn`).insertAdjacentHTML("beforeend",` + ${packagingItemsData[5].nbOfCanRequired} ${packagingItemsData[2].itemName} + ${packagingItemsData[5].nbOfBottleRequired} ${packagingItemsData[3].itemName}`);

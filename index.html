@@ -133,16 +133,19 @@
           </div>
           <div id="Task" class="tabContent">
             <div id="merchendisesToSendDescription">x</div>
+            <button id="sendMerchendisesBtn" onclick="sendMerchendises()">SEND</button>
+            <span id="taskReward"></span>
+            <div id="packagingItemsCurrentNb"></div>
             <div id="packagingContainer">
               <div id="basicPackaging">
-                <button class="basicPackagingBtn" id="cardboardBtn"></button>
-                <button class="basicPackagingBtn" id="bubbleWrapBtn"></button>
-                <button class="basicPackagingBtn" id="canBtn"></button>
-                <button class="basicPackagingBtn" id="bottleBtn"></button>
+                <button class="basicPackagingBtn" id="cardboardBtn" onclick="buyCardboard()"></button>
+                <button class="basicPackagingBtn" id="bubbleWrapBtn" onclick="buyBubbleWrap()"></button>
+                <button class="basicPackagingBtn" id="canBtn" onclick="buyCan()"></button>
+                <button class="basicPackagingBtn" id="bottleBtn" onclick="buyBottle()"></button>
               </div>
               <div id="combinedPackaging">
-                <button class="combinedPackaging" id="boxBtn"></button>
-                <button class="combinedPackaging" id="caseBtn"></button>
+                <button class="combinedPackaging" id="boxBtn" onclick="buyBox()"></button>
+                <button class="combinedPackaging" id="caseBtn" onclick="buyCase()"></button>
               </div>
             </div>
           </div>
