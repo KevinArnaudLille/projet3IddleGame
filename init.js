@@ -1,5 +1,6 @@
 // TEST FIELD
 STATES.currentMoney = 400;
+updateStats();
 
 /* Crypto tab init */
 for (let crypto of cryptoData) {
