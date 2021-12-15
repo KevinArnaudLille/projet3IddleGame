@@ -15,6 +15,14 @@ let STATES = {
   "cryptoCInStock" : 0,
   "cryptoCCurrentVal" : 20,
 
+  "cardboardCurrentNb" : 0,
+  "canCurrentNb" : 0,
+  "bottleCurrentNb" : 0,
+  "bubbleWrapCurrentNb" : 0,
+  "boxCurrentNb" : 0,
+  "caseCurrentNb" : 0,
+
+
   "isShopEnable" : false,
   "isCryptoEnable" : false,
   "isTaskEnable" : false,
@@ -66,8 +74,8 @@ let narratorData={
   ]
 };
 
-// SHOP ITEM STATS ===============================
-let shopItemStats = [
+// SHOP ITEM DATA ===============================
+let shopItemsData = [
   {
   "itemId" : "item0",
   "itemPower" : 10,
@@ -100,4 +108,38 @@ let shopItemStats = [
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,
 },
+]
+
+// PACKAGING ITEM STATS ============================
+let packagingItemsData = [
+  {
+    "itemName" : "Cardboard",
+    "itemVal" : 100,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Bubble wrap",
+    "itemVal" : 1,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Can",
+    "itemVal" : 200,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Bottle",
+    "itemVal" : 150,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Box",
+    "itemVal" : 300,
+    "isCombined" : true
+  },
+  {
+    "itemName" : "Case",
+    "itemVal" : 500,
+    "isCombined" : true
+  }
 ]

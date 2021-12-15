@@ -122,7 +122,7 @@ function launchCryptoRefresh() {
   // crypto C
   STATES.cryptoCCurrentVal = cryptoData[2].cryptoInitCurrentVal;
   setInterval(() => {
-    STATES.cryptoCCurrentVal = Math.round(cryptoData[2].cryptoMinVal + ((cryptoData[2].cryptoMaxVal - cryptoData[2].cryptoMinVal) * randn_bm() * Math.random()));
+    STATES.cryptoCCurrentVal = Math.round(cryptoData[2].cryptoMinVal + ((cryptoData[2].cryptoMaxVal - cryptoData[2].cryptoMinVal) * randn_bm()));
     UpdateCryptoVal();
   }, cryptoData[2].cryptoTimeInterval);
 }
