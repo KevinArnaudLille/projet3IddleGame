@@ -3,6 +3,11 @@ STATES.currentMoney = 400;
 updateStats();
 launchCryptoRefresh();
 
+/* Shop tab init */
+for (let item of shopItemStats) {
+  $(`#${item.itemId}`).innerHTML = item.itemName;
+}
+
 /* Crypto tab init */
 for (let crypto of cryptoData) {
   $(`#${crypto.cryptoId}Name`).innerHTML = crypto.cryptoName;

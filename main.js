@@ -90,6 +90,8 @@ function openTabs(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+/* Shop tab */
+
 /* Crypto tab */
 
 // Crypto current price update
