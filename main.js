@@ -177,7 +177,8 @@ function buyCryptoC() {
   } else {
     // Le narrateur dit un truc
     console.log("nop");
-  }
+  };
+  updateStats();
 }
 
 function sellCryptoC() {
@@ -187,7 +188,8 @@ function sellCryptoC() {
   } else {
     // Le narrateur dit un truc
     console.log("nop");
-  }
+  };
+  updateStats();
 }
 
 /* -- Formular part -- */
