@@ -72,7 +72,7 @@ let shopItemStats = [
   {
   "itemId" : "item0",
   "itemPower" : 10,
-  "itemName" : "RAM",
+  "itemName" : "RAM ",
   "itemCurrentNb" : 0,
   "itemInitPrice" : 250,
   "itemCurrentPrice" : 250,
@@ -80,7 +80,7 @@ let shopItemStats = [
 {
   "itemId" : "item1",
   "itemPower" : 100,
-  "itemName" : "Processor",
+  "itemName" : "Processor ",
   "itemCurrentNb" : 0,
   "itemInitPrice" : 1000,
   "itemCurrentPrice" : 1000,
@@ -88,7 +88,7 @@ let shopItemStats = [
 {
   "itemId" : "item2",
   "itemPower" : 1000,
-  "itemName" : "Graphic Card",
+  "itemName" : "Graphic Card ",
   "itemCurrentNb" : 0,
   "itemInitPrice" : 5000,
   "itemCurrentPrice" : 5000,
@@ -96,7 +96,7 @@ let shopItemStats = [
 {
   "itemId" : "item3",
   "itemPower" : 10000,
-  "itemName" : "NASA Cloud Subscription",
+  "itemName" : "NASA Cloud Subscription ",
   "itemCurrentNb" : 0,
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,

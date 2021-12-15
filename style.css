@@ -1,3 +1,16 @@
+/* Root */
+:root {
+  --main-bg-body-color: rgb(252, 252, 217);
+  --main-bg-globalLayout-color: bisque;
+  --main-bg-taskBoard-color: rgb(167, 87, 30);
+  --main-bg-progressBar-color: blue ;
+  --main-bg-narratorTextBox-color: lightgreen ;
+  --main-bg-styleBoxStats-color: rgb(0, 194, 0) ;
+  --text-color: blanchedalmond;
+  --progressBar-color: black;
+  --progressBar-bg-color: purple;
+}
+
 /* ====== Global layout ====== */
 html,
 body {
@@ -9,16 +22,16 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: beige;
+  background-color: var(--main-bg-color);
 }
 
 .globalLayoutSetup {
   width: 99%;
-  background-color: bisque;
+  background-color: var(--main-bg-globalLayout-color);
 }
 
 .taskboardLayoutSetup {
-  background-color: chocolate;
+  background-color: var(--main-bg-taskBoard-color);
   display: inline-block;
 }
 
@@ -33,7 +46,7 @@ body {
 /* ====== ProgressBar section ====== */
 #progressBarAndClickButtonContainer {
   height: 12%;
-  background-color: royalblue;
+  background-color: var(--main-bg-progressBar-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +56,7 @@ body {
 #progressBarBorder {
   height: 50%;
   width: 70%;
-  background-color: black;
+  background-color: var(--progressBar-color);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -53,9 +66,9 @@ body {
 }
 
 #progressBarContent {
-  background-color: purple;
+  background-color: var(--progressBar-bg-color);
   height: 90%;
-  color: black;
+  color: var(--progressBar-color);
   border-radius: 5px;
 
   display: flex;
@@ -68,7 +81,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: blanchedalmond;
+  color: var(--text-color);
 }
 
 #idleBtn {
@@ -77,13 +90,12 @@ body {
 
 /* ====== Narrator Textbox section ====== */
 #narratorTextBox {
-  background-color: lightcoral;
   height: 12%;
   display: flex;
 }
 
 #narratorTextPlace {
-  background-color: lightgreen;
+  background-color: var(--main-bg-narratorTextBox-color);
   overflow: auto;
   width: 100%;
   height: 100%;
@@ -108,7 +120,7 @@ body {
 }
 
 .styleBoxStats {
-  background-color: limegreen;
+  background-color: var(--main-bg-styleBoxStats-color);
   flex-direction: row;
   border: 1px solid black;
   padding: 5px;
@@ -122,7 +134,7 @@ body {
   flex-direction: row;
 }
 .styleBoxClick {
-  background-color: limegreen;
+  background-color: var(--main-bg-styleBoxStats-color);
   border: 1px solid black;
   padding: 5px;
   width: 80%;
@@ -174,13 +186,20 @@ body {
   border-top: none;
 }
 /* TabsContainerPart */
-#tabsContainer {
-}
+/* #tabsContainer */
+
 /* Shop */
 
 .shopBuyable {
   display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 114);
+  color: white;
   width: 20%;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Crypto */
