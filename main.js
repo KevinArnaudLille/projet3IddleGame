@@ -44,17 +44,26 @@ function progressBarUpdateAuto(idle) {
 };
 
 /* ====== Narrator Textbox section ====== */
-let narratorTextPlace = $("#narratorTextPlace");
-console.log(narratorTextPlace);
-narratorTextPlace.textContent = "start";
-
-function addText() {
-  narratorTextPlace.insertAdjacentHTML(
-    "beforeend",
-    "<br/> Un chasseur sachant chasser sans son chien est un bon chasseur"
-  );
-  narratorTextPlace.scroll(0, Math.pow(10, 10));
+// function addTextToNarrator(text) {
+//   let narratorTextPlace = $("#narratorTextPlace");
+//   narratorTextPlace.insertAdjacentHTML(
+//     "beforeend",
+//     `${text}<br/>`
+//   );
+//   narratorTextPlace.scroll(0, Math.pow(10, 10));
+// }
+async function addTextToNarrator(textList) {
+  for (text of textList){
+    await new Promise(r => setTimeout(r, 1000));
+    let narratorTextPlace = $("#narratorTextPlace");
+    narratorTextPlace.insertAdjacentHTML(
+      "beforeend",
+      `${text}<br/>`
+    )
+    narratorTextPlace.scroll(0, Math.pow(10, 10));
+  }
 }
+
 
 /* ====== Boards section ====== */
 /* -- Statsboard part -- */

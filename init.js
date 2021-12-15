@@ -2,6 +2,7 @@
 STATES.currentMoney = 400;
 updateStats();
 launchCryptoRefresh();
+MAIN_PROGRESSION()
 
 /* Shop tab init */
 for (let item of shopItemStats) {
