@@ -1,7 +1,8 @@
 // ALL DATA THAT SAVE PROGRESS =====================
 let STATES = {
-  "checkpointProgress" : 0,
+  "checkpointProgress" : 0,  
   "mainBarProgress" : 0,
+  
   "clickIncrement" : 0.001,
   "clickMultiplicator" : 1,
   "currentMoney" : 0,
