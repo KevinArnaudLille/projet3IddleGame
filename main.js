@@ -35,23 +35,16 @@ function progressBarUpdateByClick() {
   ${STATES.mainBarProgress.toFixed(3)}%`;
 };
 
-function progressBarUpdateAuto() {
-  // console.log(idle);
-  // progressBarContent.style.cssText = `
-  // width:${currentWidth += idle}%`
-  // progressText.innerHTML = `
-  // ${currentWidth.toFixed(3)}%`
+function launchProgressBarUpdateAuto() {
+  STATES.mainBarProgress += STATES.autoProgressFactor * STATES.autoProgressVal;
+  progressBarContent.style.cssText = `
+  width:${STATES.mainBarProgress}%`;
+  progressText.innerHTML = `
+  ${STATES.mainBarProgress.toFixed(3)}%`;
+  setTimeout(()=>launchProgressBarUpdateAuto(),STATES.autoProgressSpeed);
 };
 
 /* ====== Narrator Textbox section ====== */
-// function addTextToNarrator(text) {
-//   let narratorTextPlace = $("#narratorTextPlace");
-//   narratorTextPlace.insertAdjacentHTML(
-//     "beforeend",
-//     `${text}<br/>`
-//   );
-//   narratorTextPlace.scroll(0, Math.pow(10, 10));
-// }
 async function addTextToNarrator(textList) {
   for (text of textList) {
     let narratorTextPlace = $("#narratorTextPlace");

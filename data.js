@@ -5,6 +5,10 @@ let STATES = {
 
   "clickIncrement" : 0.001,
   "clickMultiplicator" : 1,
+  "autoProgressVal" : 0,
+  "autoProgressFactor" : 1,
+  "autoProgressSpeed" : 2000,
+
   "currentMoney" : 0,
   "PCPower" : 0,
   
@@ -29,6 +33,7 @@ let STATES = {
 
   "currentPackagingTask" : null,
 
+  "isAutoProgressEnable":false,
   "isShopEnable" : false,
   "isCryptoEnable" : false,
   "isTaskEnable" : false,

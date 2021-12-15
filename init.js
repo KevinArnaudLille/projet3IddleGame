@@ -4,6 +4,9 @@ updateStats();
 launchCryptoRefresh();
 updatePackagingNb()
 generateNewPackagingTask()
+STATES.isAutoProgressEnable = true;
+STATES.autoProgressVal = 0.001;
+launchProgressBarUpdateAuto()
 
 /* Shop tab init */
 for (let item of shopItemsData) {
