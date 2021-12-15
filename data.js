@@ -27,6 +27,7 @@ let STATES = {
   "boxCurrentNb" : 0,
   "caseCurrentNb" : 0,
 
+  "currentPackagingTask" : null,
 
   "isShopEnable" : false,
   "isCryptoEnable" : false,
@@ -64,21 +65,6 @@ let cryptoData = [
   }
 ];
 
-// NARRATOR TEXT ============================
-let narratorData={
-  "phase0":[
-    "Hello1",
-    "Hello2",
-    "Hello3",
-    "Hello4"
-  ],
-  "phase1":[
-    "Hello5",
-    "Hello6",
-    "Hello7"
-  ]
-};
-
 // SHOP ITEM DATA ===============================
 let shopItemsData = [
   {
@@ -114,33 +100,78 @@ let shopItemsData = [
 // PACKAGING ITEM STATS ============================
 let packagingItemsData = [
   {
+    "itemId" : "cardboard",
     "itemName" : "Cardboard",
     "itemVal" : 100,
     "isCombined" : false
   },
   {
+    "itemId" : "bubbleWrap",
     "itemName" : "Bubble wrap",
     "itemVal" : 1,
     "isCombined" : false
   },
   {
+    "itemId" : "can",
     "itemName" : "Can",
     "itemVal" : 200,
     "isCombined" : false
   },
   {
+    "itemId" : "bottle",
     "itemName" : "Bottle",
     "itemVal" : 150,
     "isCombined" : false
   },
   {
+    "itemId" : "box",
     "itemName" : "Box",
     "itemVal" : 300,
-    "isCombined" : true
+    "isCombined" : true,
+    "nbOfCarboardsRequired" : 4,
+    "nbOfBubbleWrapsRequired" : 20,
   },
   {
+    "itemId" : "case",
     "itemName" : "Case",
     "itemVal" : 500,
-    "isCombined" : true
+    "isCombined" : true,
+    "nbOfCanRequired" : 17,
+    "nbOfBottleRequired" : 9,
   }
 ]
+
+// PACKAGING TASK POSSIBILITIES ============
+let packagingTaskData = [
+  {
+    "taskId" : 0,
+    "taskText" : "Some friends want to have a party ! We have to help them !!",
+    "nbOfBoxesRequired" : 1,
+    "nbOfCasesRequired" : 3,
+    "rewardType" : "money",
+    "rewardVal" : 1000
+  },
+  {
+    "taskId" : 1,
+    "taskText" : "Prout",
+    "nbOfBoxesRequired" : 2,
+    "nbOfCasesRequired" : 1,
+    "rewardType" : "money",
+    "rewardVal" : 1500
+  }
+]
+
+// NARRATOR TEXT ============================
+let narratorData={
+  "phase0":[
+    "Hello1",
+    "Hello2",
+    "Hello3",
+    "Hello4"
+  ],
+  "phase1":[
+    "Hello5",
+    "Hello6",
+    "Hello7"
+  ]
+};
