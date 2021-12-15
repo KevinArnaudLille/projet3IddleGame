@@ -51,7 +51,7 @@ let cryptoData = [
   }
 ];
 
-// NARRATOR TEXT
+// NARRATOR TEXT ============================
 let narratorData={
   "phase0":[
     "Hello1",
@@ -66,7 +66,7 @@ let narratorData={
   ]
 };
 
-// SHOP ITEM STATS
+// SHOP ITEM STATS ===============================
 let shopItemStats = [
   {
   "itemId" : "item0",

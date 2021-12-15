@@ -5,7 +5,7 @@ launchCryptoRefresh();
 
 /* Shop tab init */
 for (let item of shopItemStats) {
-  $(`#${item.itemId}`).innerHTML = item.itemName;
+  $(`#${item.itemId}`).innerHTML = item.itemName + item.itemInitPrice;
 }
 
 /* Crypto tab init */
