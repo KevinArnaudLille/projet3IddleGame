@@ -2,7 +2,7 @@
 let STATES = {
   "checkpointProgress" : 0,  
   "mainBarProgress" : 0,
-  
+
   "clickIncrement" : 0.001,
   "clickMultiplicator" : 1,
   "currentMoney" : 0,
@@ -15,7 +15,6 @@ let STATES = {
   "cryptoCInStock" : 0,
   "cryptoCCurrentVal" : 20,
 
-  "isFormularEnable": false,
   "isShopEnable" : false,
   "isCryptoEnable" : false,
   "isTaskEnable" : false,

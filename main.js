@@ -54,13 +54,13 @@ function progressBarUpdateAuto(idle) {
 // }
 async function addTextToNarrator(textList) {
   for (text of textList){
-    await new Promise(r => setTimeout(r, 1000));
     let narratorTextPlace = $("#narratorTextPlace");
     narratorTextPlace.insertAdjacentHTML(
       "beforeend",
       `${text}<br/>`
     )
     narratorTextPlace.scroll(0, Math.pow(10, 10));
+    await new Promise(r => setTimeout(r, 1000));
   }
 }
 
@@ -201,4 +201,4 @@ function sellCryptoC() {
   updateStats();
 }
 
-/* -- Formular part -- */
+/* Task tab */

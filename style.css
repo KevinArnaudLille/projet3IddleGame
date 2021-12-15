@@ -117,10 +117,12 @@ body {
   border-radius: 5px;
   margin: 5px;
 }
-.styleBoxClickGlobal{
+
+.styleBoxClickGlobal {
   display: flex;
   flex-direction: row;
 }
+
 .styleBoxClick {
   background-color: limegreen;
   border: 1px solid black;
@@ -173,17 +175,21 @@ body {
   border: 1px solid #ccc;
   border-top: none;
 }
+
 /* TabsContainerPart */
 #tabsContainer {
+  width: 100%;
+  height: 100%;
 }
-/* Shop */
+
+/* Shop tab */
 
 .shopBuyable {
   display: flex;
   width: 20%;
 }
 
-/* Crypto */
+/* Crypto tab */
 #cryptoContainer {
   display: flex;
   justify-content: center;
@@ -201,8 +207,13 @@ td {
   font-size: 30px;
 }
 
-/* -- Formular part -- */
-#formularBoard {
-  width: 25%;
-  height: 90%;
+/* Shop tab */
+#Task {
+  height: 100%;
+  background-color: aqua;
+}
+
+#merchendisesToSendDescription {
+  height: 20%;
+  background-color: beige;
 }
