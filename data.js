@@ -15,6 +15,11 @@ let STATES = {
   "cryptoCInStock" : 0,
   "cryptoCCurrentVal" : 20,
 
+  "RAMCurrentNb" : 0,
+  "ProcessorCurrentNb" : 0,
+  "GraphicCardCurrentNb" : 0,
+  "NASACloudSubCurrentNb" : 0,
+
   "isShopEnable" : false,
   "isCryptoEnable" : false,
   "isTaskEnable" : false,
@@ -72,7 +77,7 @@ let shopItemStats = [
   "itemId" : "item0",
   "itemPower" : 10,
   "itemName" : "RAM ",
-  "itemCurrentNb" : 0,
+  "RAMCurrentNb" : 0,
   "itemInitPrice" : 250,
   "itemCurrentPrice" : 250,
 },
@@ -80,7 +85,7 @@ let shopItemStats = [
   "itemId" : "item1",
   "itemPower" : 100,
   "itemName" : "Processor ",
-  "itemCurrentNb" : 0,
+  "ProcessorCurrentNb" : 0,
   "itemInitPrice" : 1000,
   "itemCurrentPrice" : 1000,
 },
@@ -96,7 +101,7 @@ let shopItemStats = [
   "itemId" : "item3",
   "itemPower" : 10000,
   "itemName" : "NASA Cloud Subscription ",
-  "itemCurrentNb" : 0,
+  
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,
 },

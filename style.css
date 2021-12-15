@@ -115,7 +115,7 @@ body {
   justify-content: space-around;
   align-items: stretch;
   flex-direction: column;
-  width: 15%;
+  width: 20%;
   height: 90%;
 }
 
@@ -128,6 +128,7 @@ body {
   height: auto;
   border-radius: 5px;
   margin: 5px;
+  font-size: 20px;
 }
 
 .styleBoxClickGlobal {
@@ -143,6 +144,7 @@ body {
   height: auto;
   border-radius: 5px;
   margin: 5px;
+  font-size: 20px;
 }
 
 .cryptoIndicators {
@@ -157,7 +159,7 @@ body {
   justify-content: space-around;
   align-items: stretch;
   flex-direction: column;
-  width: 57%;
+  width: 75%;
   height: 90%;
 }
 
@@ -206,6 +208,7 @@ body {
   width: 20%;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 /* Crypto tab */
