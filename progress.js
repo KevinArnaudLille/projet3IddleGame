@@ -5,11 +5,13 @@ function MAIN_PROGRESSION() {
     case STATES.checkpointProgress === 0 && STATES.mainBarProgress === 0:
       addTextToNarrator([narratorData.phase0[0], narratorData.phase0[1]]);
       STATES.checkpointProgress++;
+      updateStats();
       break;
 
     case STATES.checkpointProgress === 1 && STATES.mainBarProgress >= 0.01:
       addTextToNarrator([narratorData.phase1[0], narratorData.phase1[1]]);
       STATES.checkpointProgress++;
+      updateStats();
       break;
   }
 

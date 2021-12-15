@@ -4,7 +4,6 @@ updateStats();
 launchCryptoRefresh();
 updatePackagingNb()
 generateNewPackagingTask()
-MAIN_PROGRESSION()
 
 /* Shop tab init */
 for (let item of shopItemsData) {
@@ -28,3 +27,6 @@ for (let item of packagingItemsData){
 $(`#boxBtn`).insertAdjacentHTML("beforeend",` + ${packagingItemsData[4].nbOfCarboardsRequired} ${packagingItemsData[0].itemName} + ${packagingItemsData[4].nbOfBubbleWrapsRequired} ${packagingItemsData[1].itemName}`);
 
 $(`#caseBtn`).insertAdjacentHTML("beforeend",` + ${packagingItemsData[5].nbOfCanRequired} ${packagingItemsData[2].itemName} + ${packagingItemsData[5].nbOfBottleRequired} ${packagingItemsData[3].itemName}`);
+
+// LET'S GO
+MAIN_PROGRESSION()

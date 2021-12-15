@@ -35,7 +35,7 @@ function progressBarUpdateByClick() {
   ${STATES.mainBarProgress.toFixed(3)}%`;
 };
 
-function progressBarUpdateAuto(idle) {
+function progressBarUpdateAuto() {
   // console.log(idle);
   // progressBarContent.style.cssText = `
   // width:${currentWidth += idle}%`
