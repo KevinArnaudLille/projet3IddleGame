@@ -20,6 +20,14 @@ let STATES = {
   "GraphicCardCurrentNb" : 0,
   "NASACloudSubCurrentNb" : 0,
 
+  "cardboardCurrentNb" : 0,
+  "canCurrentNb" : 0,
+  "bottleCurrentNb" : 0,
+  "bubbleWrapCurrentNb" : 0,
+  "boxCurrentNb" : 0,
+  "caseCurrentNb" : 0,
+
+
   "isShopEnable" : false,
   "isCryptoEnable" : false,
   "isTaskEnable" : false,
@@ -71,13 +79,12 @@ let narratorData={
   ]
 };
 
-// SHOP ITEM STATS ===============================
-let shopItemStats = [
+// SHOP ITEM DATA ===============================
+let shopItemsData = [
   {
   "itemId" : "item0",
   "itemPower" : 10,
   "itemName" : "RAM ",
-  "RAMCurrentNb" : 0,
   "itemInitPrice" : 250,
   "itemCurrentPrice" : 250,
 },
@@ -85,7 +92,6 @@ let shopItemStats = [
   "itemId" : "item1",
   "itemPower" : 100,
   "itemName" : "Processor ",
-  "ProcessorCurrentNb" : 0,
   "itemInitPrice" : 1000,
   "itemCurrentPrice" : 1000,
 },
@@ -93,7 +99,6 @@ let shopItemStats = [
   "itemId" : "item2",
   "itemPower" : 1000,
   "itemName" : "Graphic Card ",
-  "itemCurrentNb" : 0,
   "itemInitPrice" : 5000,
   "itemCurrentPrice" : 5000,
 },
@@ -101,8 +106,41 @@ let shopItemStats = [
   "itemId" : "item3",
   "itemPower" : 10000,
   "itemName" : "NASA Cloud Subscription ",
-  
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,
 },
+]
+
+// PACKAGING ITEM STATS ============================
+let packagingItemsData = [
+  {
+    "itemName" : "Cardboard",
+    "itemVal" : 100,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Bubble wrap",
+    "itemVal" : 1,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Can",
+    "itemVal" : 200,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Bottle",
+    "itemVal" : 150,
+    "isCombined" : false
+  },
+  {
+    "itemName" : "Box",
+    "itemVal" : 300,
+    "isCombined" : true
+  },
+  {
+    "itemName" : "Case",
+    "itemVal" : 500,
+    "isCombined" : true
+  }
 ]
