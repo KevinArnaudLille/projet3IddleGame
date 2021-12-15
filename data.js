@@ -65,3 +65,39 @@ let narratorData={
     "Hello7"
   ]
 };
+
+// SHOP ITEM STATS
+let shopItemDate = [
+  {
+  "ProcessorId" : "ProcessorId",
+  "ProcessorValue" : 0,
+  "ProcessorName" : "Processor",
+  "ProcessorCurrentValue" : 0,
+  "ProcessorPrice" : 250 ,
+  "ProcessorCurrentPrice" : 0,
+},
+{
+  "RAMId" : "ProcessorId",
+  "RAMValue" : 0,
+  "RAMName" : "Processor",
+  "RAMCurrentValue" : 0,
+  "RAMPrice" : 250 ,
+  "RAMCurrentPrice" : 0,
+},
+{
+  "GraphiceCardId" : "ProcessorId",
+  "GraphiceCardValue" : 0,
+  "GraphiceCardName" : "Processor",
+  "GraphiceCardCurrentValue" : 0,
+  "GraphiceCardPrice" : 250 ,
+  "GraphiceCardCurrentPrice" : 0,
+},
+{
+  "HardwareId" : "ProcessorId",
+  "HardwareValue" : 0,
+  "HardwareName" : "Processor",
+  "HardwareCurrentValue" : 0,
+  "HardwarePrice" : 250 ,
+  "HardwareCurrentPrice" : 0,
+},
+]
