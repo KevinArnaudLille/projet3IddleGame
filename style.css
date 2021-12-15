@@ -1,15 +1,34 @@
 /* Root */
 :root {
-  --main-bg-body-color: rgb(252, 252, 217);
-  --main-bg-globalLayout-color: bisque;
-  --main-bg-taskBoard-color: rgb(167, 87, 30);
-  --main-bg-progressBar-color: blue ;
-  --main-bg-narratorTextBox-color: lightgreen ;
-  --main-bg-styleBoxStats-color: rgb(0, 194, 0) ;
+  --main-bg-body-color: rgb(66, 13, 00);
+  --main-bg-globalLayout-color: rgb(148, 15, 33);
+  --main-bg-taskBoard-color: rgb(124, 0, 17);
+  --main-bg-progressBar-color: rgb(148, 15, 33) ;
+  --main-bg-narratorTextBox-color: rgb(148, 15, 33) ;
+  --main-bg-styleBoxStats-color: rgb(194, 116, 127) ;
   --text-color: blanchedalmond;
   --progressBar-color: black;
   --progressBar-bg-color: purple;
+
+  --main-color-a: rgb(215, 180, 185);
+  --main-color-b: rgb(194, 116, 127);
+  --main-color-c: rgb(170, 57, 73);
+  --main-color-d: rgb(148, 15, 33);
+  --main-color-e: rgb(124, 0, 17);
+
+  --second-color-a: rgb(205, 214, 179);
+  --second-color-b: rgb(172, 193, 115);
+  --second-color-c: rgb(139, 169, 57);
+  --second-color-d: rgb(112, 147, 15);
+  --second-color-e: rgb(90, 123, 0);
+
+  --third-color-a: rgb(121, 144, 140);
+  --third-color-b: rgb(78, 130, 120);
+  --third-color-c: rgb(39, 114, 99);
+  --third-color-d: rgb(10, 99, 82);
+  --third-color-e: rgb(0, 83, 67);
 }
+  
 
 /* ====== Global layout ====== */
 html,
@@ -22,16 +41,16 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--main-bg-color);
+  background-color: var(--third-color-e);
 }
 
 .globalLayoutSetup {
   width: 99%;
-  background-color: var(--main-bg-globalLayout-color);
+  background-color: var(--third-color-d);
 }
 
 .taskboardLayoutSetup {
-  background-color: var(--main-bg-taskBoard-color);
+  background-color: var(--third-color-c);
   display: inline-block;
 }
 
@@ -46,7 +65,7 @@ body {
 /* ====== ProgressBar section ====== */
 #progressBarAndClickButtonContainer {
   height: 12%;
-  background-color: var(--main-bg-progressBar-color);
+  background-color: var(--third-color-d);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +85,7 @@ body {
 }
 
 #progressBarContent {
-  background-color: var(--progressBar-bg-color);
+  background-color: var(--main-color-d);
   height: 90%;
   color: var(--progressBar-color);
   border-radius: 5px;
@@ -95,7 +114,7 @@ body {
 }
 
 #narratorTextPlace {
-  background-color: var(--main-bg-narratorTextBox-color);
+  background-color: var(--third-color-c);
   overflow: auto;
   width: 100%;
   height: 100%;
@@ -117,10 +136,11 @@ body {
   flex-direction: column;
   width: 20%;
   height: 90%;
+  background-color: var(--second-color-c);
 }
 
 .styleBoxStats {
-  background-color: var(--main-bg-styleBoxStats-color);
+  background-color: var(--second-color-b);
   flex-direction: row;
   border: 1px solid black;
   padding: 5px;
@@ -137,7 +157,7 @@ body {
 }
 
 .styleBoxClick {
-  background-color: var(--main-bg-styleBoxStats-color);
+  background-color: var(--second-color-b);
   border: 1px solid black;
   padding: 5px;
   width: 80%;
@@ -194,6 +214,7 @@ body {
 #tabsContainer {
   width: 100%;
   height: 100%;
+  background-color: var(--second-color-c);
 }
 
 /* Shop tab */
@@ -203,7 +224,7 @@ body {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 114);
+  background-color: var(--third-color-e);
   color: white;
   width: 20%;
   border-radius: 5px;
