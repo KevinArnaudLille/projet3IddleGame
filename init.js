@@ -1,7 +1,5 @@
 // TEST FIELD
 updateStats();
-STATES.mainBarProgress = 1;
-STATES.currentMoney = 50000000;
 
 // Tabs display init
 $("#allBoards").style.display = "none";
