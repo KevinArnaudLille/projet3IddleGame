@@ -13,7 +13,7 @@ $("#statsTabBtn").style.display = "none";
 STATES.isAutoProgressEnable = true;
 launchShopDisplay();
 launchProgressBarUpdateAuto();
-STATES.currentMoney = 5000;
+STATES.currentMoney = 0;
 
 launchCryptoDisplay()
 launchCryptoRefresh()
