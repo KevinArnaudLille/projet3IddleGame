@@ -43,6 +43,24 @@ function MAIN_PROGRESSION() {
       launchCryptoRefresh()
       updateStats();
       break;
+
+    case STATES.checkpointProgress === 5 && STATES.mainBarProgress >= storyProgressBarCheckpoint[5]:
+      addTextToNarrator(narratorData.phase21);
+      STATES.clickIncrement += 0.001;
+      STATES.clickMultiplicator += 0.1;
+      STATES.checkpointProgress++;
+      updateStats();
+      break;
+
+    case STATES.checkpointProgress === 6 && STATES.mainBarProgress >= storyProgressBarCheckpoint[6]:
+      addTextToNarrator(narratorData.phase30);
+      STATES.checkpointProgress++;
+      STATES.currentMoney += 1000;
+      launchTaskDisplay()
+      generateNewPackagingTask()
+      updatePackagingNb()
+      updateStats();
+      break;
   }
 
   setTimeout(() => MAIN_PROGRESSION(), 10)

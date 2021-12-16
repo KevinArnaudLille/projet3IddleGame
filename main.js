@@ -2,16 +2,16 @@
 /* -- Statsboard part -- */
 function updateStats() {
   clickMultiplicator.innerHTML = STATES.clickMultiplicator;
-  clickIncrement.innerHTML = STATES.clickIncrement;
+  clickIncrement.innerHTML = STATES.clickIncrement.toFixed(3);
   currentMoney.innerHTML = `$$$ ${STATES.currentMoney}`;
-  cryptoAInStock.innerHTML = `${STATES.cryptoAInStock} TonyCoin`;
-  cryptoBInStock.innerHTML = STATES.cryptoBInStock + " ClickCoin";
-  cryptoCInStock.innerHTML = STATES.cryptoCInStock + " SullyCoin";
-  PCPower.innerHTML = "Pc Power " + STATES.PCPower;
+  cryptoAInStock.innerHTML = `${STATES.cryptoAInStock} ClickCoin`;
+  cryptoBInStock.innerHTML = `${STATES.cryptoBInStock} TonyCoin`;
+  cryptoCInStock.innerHTML = `${STATES.cryptoCInStock} KekCoin`;
+  PCPower.innerHTML = `Pc Power ${STATES.PCPower}`;
 }
 
 /* -- Taskboard part -- */
-function openTabs(evt, cityName) {
+function openTabs(evt, name) {
   // Declare all variables
   let i, tabcontent, tablinks;
 
@@ -28,7 +28,7 @@ function openTabs(evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(name).style.display = "block";
   evt.currentTarget.className += " active";
 }
 

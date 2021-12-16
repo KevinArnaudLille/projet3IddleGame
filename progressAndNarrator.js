@@ -44,7 +44,7 @@ async function addTextToNarrator(textList) {
       `${text} . . . <br/>`
     )
     narratorTextPlace.scroll(0, Math.pow(10, 10));
-    await new Promise(r => setTimeout(r, (80 * text.length)));
+    await new Promise(r => setTimeout(r, (90 * text.length)));
   }
 }
 

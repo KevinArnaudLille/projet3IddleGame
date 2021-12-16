@@ -1,215 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THE MEANING OF LIFE</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Yuji+Syuku&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div id="title" class="globalLayoutSetup">
-      <h1>THE MEANING OF LIFE</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE MEANING OF LIFE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Yuji+Syuku&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="title" class="globalLayoutSetup">
+    <h1>THE MEANING OF LIFE</h1>
+  </div>
+  <div id="progressBarAndClickButtonContainer" class="globalLayoutSetup">
+    <div id="progressBarBorder">
+      <div id="progressBarContent"></div>
+      <div id="progressText">0%</div>
     </div>
-    <div id="progressBarAndClickButtonContainer" class="globalLayoutSetup">
-      <div id="progressBarBorder">
-        <div id="progressBarContent"></div>
-        <div id="progressText">0%</div>
-      </div>
-      <button id="clickIdleBtn">
-        Click!
-      </button>
-    </div>
-    <div id="narratorTextBox" class="globalLayoutSetup">
-      <div id="narratorTextPlace"></div>
-    </div>
-    <div id="allBoards" class="globalLayoutSetup">
-      <div id="statsBoard" class="taskboardLayoutSetup">
-        <div>
+    <button id="clickIdleBtn">
+      Click!
+    </button>
+  </div>
+  <div id="narratorTextBox" class="globalLayoutSetup">
+    <div id="narratorTextPlace"></div>
+  </div>
+  <div id="allBoards" class="globalLayoutSetup">
+    <div id="statsBoard" class="taskboardLayoutSetup">
+      <div id="styleBoxClicks">
         <div class="styleBoxClickPower">
-          <div class="styleBoxClickPowerName">Click<br/>Multiplicator</div>
-          <div class="styleBoxClickPowerName">Click<br/>Power</div>
+          <div class="styleBoxClickPowerName">Click<br />Factor</div>
+          <div class="styleBoxClickPowerName">Click<br />Power</div>
         </div>
         <div class="styleBoxClickGlobal">
           <div class="styleBoxClick" id="clickMultiplicator"></div>
           <div class="styleBoxClick" id="clickIncrement"></div>
         </div>
       </div>
-        <div class="styleBoxStats" id="currentMoney"></div>
-        <div class="styleBoxStats" id="cryptoStatsBox">
-          Crypto
-          <div class="cryptoIndicators" id="cryptoAInStock"></div>
-          <div class="cryptoIndicators" id="cryptoBInStock"></div>
-          <div class="cryptoIndicators" id="cryptoCInStock"></div>
-        </div>
-        <div class="styleBoxStats" id="PCPower"></div>
+      <div class="styleBoxStats" id="currentMoney"></div>
+      <div class="styleBoxStats" id="cryptoStatsBox">
+        <div id="cryptoTitle">Cryptos</div>
+        <div class="cryptoIndicators" id="cryptoAInStock"></div>
+        <div class="cryptoIndicators" id="cryptoBInStock"></div>
+        <div class="cryptoIndicators" id="cryptoCInStock"></div>
       </div>
-      <div id="taskBoard" class="taskboardLayoutSetup">
-        <div id="tabsContainer">
-          <div id="tabsButtons">
-            <button class="tabLinks" onclick="openTabs(event, `Shop`)">
-              Shop
-            </button>
-            <button class="tabLinks" onclick="openTabs(event, `Crypto`)" id="cryptoTabBtn">
-              Crypto
-            </button>
-            <button class="tabLinks" onclick="openTabs(event, `Task`)"
-            id="taskTabBtn">
-              Task
-            </button>
-            <button class="tabLinks" onclick="openTabs(event, `Stats`)"
-            id="statsTabBtn">
-              Stats
-            </button>
+      <div class="styleBoxStats" id="PCPower"></div>
+    </div>
+    <div id="taskBoard" class="taskboardLayoutSetup">
+      <div id="tabsContainer">
+        <div id="tabsButtons">
+          <button class="tabLinks" onclick="openTabs(event, `Shop`)" id="cryptoShopBtn">
+            Shop
+          </button>
+          <button class="tabLinks" onclick="openTabs(event, `Crypto`)" id="cryptoTabBtn">
+            Crypto
+          </button>
+          <button class="tabLinks" onclick="openTabs(event, `Task`)" id="taskTabBtn">
+            Task
+          </button>
+          <button class="tabLinks" onclick="openTabs(event, `Stats`)" id="statsTabBtn">
+            Stats
+          </button>
+        </div>
+        <div id="tabsContents">
+          <div id="Shop" class="tabContent">
+            <div id="subShopA">
+              <button class="shopBuyable" onclick="updatePCPower('item0')" id="item0"></button>
+              <button class="shopBuyable" onclick="updatePCPower('item1')" id="item1"></button>
+            </div>
+            <div id="subShopB">
+              <button class="shopBuyable" onclick="updatePCPower('item2')" id="item2"></button>
+              <button class="shopBuyable" onclick="updatePCPower('item3')" id="item3"></button>
+            </div>
           </div>
-          <div id="tabsContents">
-            <div id="Shop" class="tabContent">
-              <button
-                class="shopBuyable"
-                onclick="updatePCPower('item0')"
-                id="item0"
-              ></button>
-              <button
-                class="shopBuyable"
-                onclick="updatePCPower('item1')"
-                id="item1"
-              ></button>
-              <button
-                class="shopBuyable"
-                onclick="updatePCPower('item2')"
-                id="item2"
-              ></button>
-              <button
-                class="shopBuyable"
-                onclick="updatePCPower('item3')"
-                id="item3"
-              ></button>
+          <div id="Crypto" class="tabContent">
+            <div id="cryptoContainer">
+              <table id="cryptoTable">
+                <tr>
+                  <td>Crypto name</td>
+                  <td>Current price</td>
+                  <td>Min.</td>
+                  <td>Mid.</td>
+                  <td>Max.</td>
+                  <td>BUY</td>
+                  <td>SELL</td>
+                </tr>
+                <tr class="cryptoLines" id="cryptoA">
+                  <td id="cryptoAName"></td>
+                  <td id="cryptoACurrentVal"></td>
+                  <td id="cryptoAMinVal"></td>
+                  <td id="cryptoAMedVal"></td>
+                  <td id="cryptoAMaxVal"></td>
+                  <td id="cryptoABuyCell">
+                    <button id="cryptoABuyButton" onclick="buyCryptoA()">
+                      BUY
+                    </button>
+                  </td>
+                  <td id="cryptoASellCell">
+                    <button id="cryptoASellButton" onclick="sellCryptoA()">
+                      SELL
+                    </button>
+                  </td>
+                </tr>
+                <tr class="cryptoLines" id="cryptoB">
+                  <td id="cryptoBName"></td>
+                  <td id="cryptoBCurrentVal"></td>
+                  <td id="cryptoBMinVal"></td>
+                  <td id="cryptoBMedVal"></td>
+                  <td id="cryptoBMaxVal"></td>
+                  <td id="cryptoBBuyCell">
+                    <button id="cryptoBBuyButton" onclick="buyCryptoB()">
+                      BUY
+                    </button>
+                  </td>
+                  <td id="cryptoBSellCell">
+                    <button id="cryptoBSellButton" onclick="sellCryptoB()">
+                      SELL
+                    </button>
+                  </td>
+                </tr>
+                <tr class="cryptoLines" id="cryptoC">
+                  <td id="cryptoCName"></td>
+                  <td id="cryptoCCurrentVal"></td>
+                  <td id="cryptoCMinVal"></td>
+                  <td id="cryptoCMedVal"></td>
+                  <td id="cryptoCMaxVal"></td>
+                  <td id="cryptoCBuyCell">
+                    <button id="cryptoCBuyButton" onclick="buyCryptoC()">
+                      BUY
+                    </button>
+                  </td>
+                  <td id="cryptoCSellCell">
+                    <button id="cryptoCSellButton" onclick="sellCryptoC()">
+                      SELL
+                    </button>
+                  </td>
+                </tr>
+              </table>
             </div>
-            <div id="Crypto" class="tabContent">
-              <div id="cryptoContainer">
-                <table id="cryptoTable">
-                  <tr>
-                    <td>Crypto name</td>
-                    <td>Current price</td>
-                    <td>Min.</td>
-                    <td>Mid.</td>
-                    <td>Max.</td>
-                    <td>BUY</td>
-                    <td>SELL</td>
-                  </tr>
-                  <tr class="cryptoLines" id="cryptoA">
-                    <td id="cryptoAName"></td>
-                    <td id="cryptoACurrentVal"></td>
-                    <td id="cryptoAMinVal"></td>
-                    <td id="cryptoAMedVal"></td>
-                    <td id="cryptoAMaxVal"></td>
-                    <td id="cryptoABuyCell">
-                      <button id="cryptoABuyButton" onclick="buyCryptoA()">
-                        BUY
-                      </button>
-                    </td>
-                    <td id="cryptoASellCell">
-                      <button id="cryptoASellButton" onclick="sellCryptoA()">
-                        SELL
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="cryptoLines" id="cryptoB">
-                    <td id="cryptoBName"></td>
-                    <td id="cryptoBCurrentVal"></td>
-                    <td id="cryptoBMinVal"></td>
-                    <td id="cryptoBMedVal"></td>
-                    <td id="cryptoBMaxVal"></td>
-                    <td id="cryptoBBuyCell">
-                      <button id="cryptoBBuyButton" onclick="buyCryptoB()">
-                        BUY
-                      </button>
-                    </td>
-                    <td id="cryptoBSellCell">
-                      <button id="cryptoBSellButton" onclick="sellCryptoB()">
-                        SELL
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="cryptoLines" id="cryptoC">
-                    <td id="cryptoCName"></td>
-                    <td id="cryptoCCurrentVal"></td>
-                    <td id="cryptoCMinVal"></td>
-                    <td id="cryptoCMedVal"></td>
-                    <td id="cryptoCMaxVal"></td>
-                    <td id="cryptoCBuyCell">
-                      <button id="cryptoCBuyButton" onclick="buyCryptoC()">
-                        BUY
-                      </button>
-                    </td>
-                    <td id="cryptoCSellCell">
-                      <button id="cryptoCSellButton" onclick="sellCryptoC()">
-                        SELL
-                      </button>
-                    </td>
-                  </tr>
-                </table>
+          </div>
+          <div id="Task" class="tabContent">
+            <div id="taskContainer">
+              <div id="merchendisesToSendDescription"></div>
+              <div id="sendAndReward">
+                <button id="sendMerchendisesBtn" onclick="sendMerchendises()">
+                  SEND
+                </button>
+                <span id="taskReward"></span>
               </div>
-            </div>
-            <div id="Task" class="tabContent">
-              <div id="merchendisesToSendDescription">x</div>
-              <button id="sendMerchendisesBtn" onclick="sendMerchendises()">
-                SEND
-              </button>
-              <span id="taskReward"></span>
               <div id="packagingItemsCurrentNb"></div>
               <div id="packagingContainer">
                 <div id="basicPackaging">
-                  <button
-                    class="basicPackagingBtn"
-                    id="cardboardBtn"
-                    onclick="buyCardboard()"
-                  ></button>
-                  <button
-                    class="basicPackagingBtn"
-                    id="bubbleWrapBtn"
-                    onclick="buyBubbleWrap()"
-                  ></button>
-                  <button
-                    class="basicPackagingBtn"
-                    id="canBtn"
-                    onclick="buyCan()"
-                  ></button>
-                  <button
-                    class="basicPackagingBtn"
-                    id="bottleBtn"
-                    onclick="buyBottle()"
-                  ></button>
+                  <button class="basicPackagingBtn" id="cardboardBtn" onclick="buyCardboard()"></button>
+                  <button class="basicPackagingBtn" id="bubbleWrapBtn" onclick="buyBubbleWrap()"></button>
+                  <button class="basicPackagingBtn" id="canBtn" onclick="buyCan()"></button>
+                  <button class="basicPackagingBtn" id="bottleBtn" onclick="buyBottle()"></button>
                 </div>
                 <div id="combinedPackaging">
-                  <button
-                    class="combinedPackaging"
-                    id="boxBtn"
-                    onclick="buyBox()"
-                  ></button>
-                  <button
-                    class="combinedPackaging"
-                    id="caseBtn"
-                    onclick="buyCase()"
-                  ></button>
+                  <button class="combinedPackaging" id="boxBtn" onclick="buyBox()"></button>
+                  <button class="combinedPackaging" id="caseBtn" onclick="buyCase()"></button>
                 </div>
               </div>
             </div>
-            <div id="Stats" class="tabContent">
-              <h3>In progress ...</h3>
-              <p>Nothing here for now :(</p>
-            </div>
+          </div>
+          <div id="Stats" class="tabContent">
+            <h3>In progress ...</h3>
+            <p>Nothing here for now :(</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <script src="data.js"></script>
   <script src="progressAndNarrator.js"></script>

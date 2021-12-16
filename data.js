@@ -47,26 +47,26 @@ const cryptoData = [
     "cryptoMinVal" : 1,
     "cryptoMedVal" : 10,
     "cryptoMaxVal" : 20,
-    "cryptoTimeInterval" : 1500,
+    "cryptoTimeInterval" : 2222,
     "cryptoInitCurrentVal" : 10,
   },
   {
     "cryptoId" : "cryptoB",
     "cryptoName" : "TonyCoin",
     "cryptoMinVal" : 1,
-    "cryptoMedVal" : 20,
-    "cryptoMaxVal" : 30,
-    "cryptoTimeInterval" : 5000,
-    "cryptoInitCurrentVal" : 20,
+    "cryptoMedVal" : 100,
+    "cryptoMaxVal" : 200,
+    "cryptoTimeInterval" : 5555,
+    "cryptoInitCurrentVal" : 100,
   },
   {
     "cryptoId" : "cryptoC",
     "cryptoName" : "KekCoin",
-    "cryptoMinVal" : 0,
-    "cryptoMedVal" : 50,
-    "cryptoMaxVal" : 100,
-    "cryptoTimeInterval" : 10000,
-    "cryptoInitCurrentVal" : 20,
+    "cryptoMinVal" : 1,
+    "cryptoMedVal" : 1000,
+    "cryptoMaxVal" : 2000,
+    "cryptoTimeInterval" : 33333,
+    "cryptoInitCurrentVal" : 1000,
   }
 ];
 
@@ -75,7 +75,7 @@ const shopItemsData = [
   {
   "itemId" : "item0",
   "itemPower" : 1,
-  "itemName" : "RAM ",
+  "itemName" : "RAM",
   "itemInitPrice" : 250,
   "itemCurrentPrice" : 250,
   "itemEffectOnAutoProgressVal" : 0.0005,
@@ -85,7 +85,7 @@ const shopItemsData = [
 {
   "itemId" : "item1",
   "itemPower" : 2,
-  "itemName" : "Processor ",
+  "itemName" : "Processor",
   "itemInitPrice" : 1000,
   "itemCurrentPrice" : 1000,
   "itemEffectOnAutoProgressVal" : 0.001,
@@ -95,7 +95,7 @@ const shopItemsData = [
 {
   "itemId" : "item2",
   "itemPower" : 4,
-  "itemName" : "Graphic Card ",
+  "itemName" : "Graphic Card",
   "itemInitPrice" : 5000,
   "itemCurrentPrice" : 5000,
   "itemEffectOnAutoProgressVal" : 0.002,
@@ -105,7 +105,7 @@ const shopItemsData = [
 {
   "itemId" : "item3",
   "itemPower" : 10,
-  "itemName" : "NASA Cloud Subscription ",
+  "itemName" : "NASA Cloud Subs",
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,
   "itemEffectOnAutoProgressVal" : 0.005,
@@ -174,15 +174,15 @@ const packagingTaskData = [
     "nbOfBoxesRequired" : 2,
     "nbOfCasesRequired" : 1,
     "rewardType" : "money",
-    "rewardVal" : 500,
+    "rewardVal" : 1000,
   },
   {
     "taskId" : 2,
     "taskText" : "I need supply for a charity center, help me my friend.",
     "nbOfBoxesRequired" : 4,
     "nbOfCasesRequired" : 4,
-    "rewardType" : "money",
-    "rewardVal" : 1500,
+    "rewardType" : "Click Power",
+    "rewardVal" : 0.005,
   },
   {
     "taskId" : 3,
@@ -190,23 +190,23 @@ const packagingTaskData = [
     "nbOfBoxesRequired" : 0,
     "nbOfCasesRequired" : 3,
     "rewardType" : "money",
-    "rewardVal" : 1000,
+    "rewardVal" : 2000,
   },
   {
     "taskId" : 4,
     "taskText" : "A church need supply for orphans, you can't abandon me on this...",
     "nbOfBoxesRequired" : 7,
     "nbOfCasesRequired" : 6,
-    "rewardType" : "money",
-    "rewardVal" : 2500,
+    "rewardType" : "Click Power",
+    "rewardVal" : 0.01,
   },
   {
     "taskId" : 5,
     "taskText" : "I'm going to do a big party for a special occasion but i need some supply to do it, help me man.",
     "nbOfBoxesRequired" : 10,
     "nbOfCasesRequired" : 10,
-    "rewardType" : "money",
-    "rewardVal" : 5000,
+    "rewardType" : "Click Factor",
+    "rewardVal" : 0.5,
   },
 ]
 
@@ -222,7 +222,7 @@ const narratorData={
     "Oh! \\o/ Finally someone is here \\o/! Wait wait wait!",
     "Please just listen to me",
     "I'm Nathan by the way ;) ",
-    "Last day, I met an old bearded man that predents to know the way to find The Meaning Of Life!",
+    "Last day, I met an old bearded man that claimed to know the way to find The Meaning Of Life!",
     "Believe me or not, I trust him, just follows his instructions and finds myself on this webpage",
     "You see that progress bar ? We need to complete it and then The Meaning Of Life will be revealed!",
     "You seem quite sharp, I'm sure you already guess how we will proceed",
@@ -242,13 +242,39 @@ const narratorData={
   [
     "Ok it's connected!",
     "You should see a bar autoprogression",
-    "It's very slow for now but there is also a shop where you can spend your money to upgrade my computer!",
+    "It's very slow for now but there is also a shop to spend your money to upgrade my computer!",
     "You don't have money ? Don't worry I'll lend you some",
-    "That's not that much but I may have an idea to generate income",
+    "That's not much but I may have an idea to generate income",
     "I'll come back soon, don't forget to click ;) ",
+  ],
+  "phase20":
+  [
+    "I'm back",
+    "See the Crypto icon next to Shop ?",
+    "If you click on it, you'll see a cryptocurrencies trading table. All you need to do is to buy and sell crypto at the right time!",
+    "Minimum (Min.), maximum (Max.) and median (Med) prices are shown in the table.",
+    "Being patient is the key!",
+    "Anyway ... I can't stay so see you!"
+  ],
+  "phase21":
+  [
+    "Hello there, you finally reach 1%!",
+    "As a reward, I used some of my precious time to increase your click power and your click factor",
+    "Your click is now more powerfull than ever, give it a shot!"
+  ],
+  "phase30":
+  [
+    "Well well well",
+    "I'll not lie to you",
+    "I'm not satisfy by your speed",
+    "You're doing your best, I get it, so I find a way to speed up the progression",
+    "Here there is a new tab next to the crypto",
+    "This one will let you help me with my transport company. If you're packaging what I'll ask, you'll unlock some amazing reward!",
+    "Here is some money to get start ;) That's the last time I'm doing this so, beginning now, you need to be very cautious with your money",
+    "Good luck, I'm counting on you !"
   ],
 };
 
 // STORY TRIGGER DATA ============================
 
-const storyProgressBarCheckpoint=[0,0.18,0.25,0.32,0.5];
+const storyProgressBarCheckpoint=[0,0.18,0.25,0.3,0.5,1,2];

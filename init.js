@@ -9,12 +9,6 @@ $("#cryptoTabBtn").style.display = "none";
 $("#taskTabBtn").style.display = "none";
 $("#statsTabBtn").style.display = "none";
 
-// A METTRE DANS LA STORY
-
-// launchTaskDisplay()
-// generateNewPackagingTask()
-// updatePackagingNb()
-
 /* Progress bar init */
 let progressBarBorder = $("#progressBarBorder");
 let progressBarContent = $("#progressBarContent");
@@ -27,7 +21,7 @@ progressText.innerHTML = `
 
 /* Shop tab init */
 for (let item of shopItemsData) {
-  $(`#${item.itemId}`).innerHTML = item.itemName + item.itemInitPrice;
+  $(`#${item.itemId}`).innerHTML = `Buy ${item.itemName}<br/>for $$$ ${item.itemInitPrice}` ;
 }
 
 /* Crypto tab init */

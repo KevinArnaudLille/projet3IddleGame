@@ -1,6 +1,6 @@
 /* Task tab */
 function updatePackagingNb() {
-  $("#packagingItemsCurrentNb").innerHTML = `
+  $("#packagingItemsCurrentNb").innerHTML = `You have 
   ${STATES.cardboardCurrentNb} ${packagingItemsData[0].itemName} //
   ${STATES.bubbleWrapCurrentNb} ${packagingItemsData[1].itemName} //
   ${STATES.canCurrentNb} ${packagingItemsData[2].itemName} //
@@ -14,8 +14,7 @@ function buyCardboard() {
     STATES.cardboardCurrentNb += 1;
     STATES.currentMoney -= packagingItemsData[0].itemVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updatePackagingNb();
   updateStats();
@@ -26,8 +25,7 @@ function buyBubbleWrap() {
     STATES.bubbleWrapCurrentNb += 1;
     STATES.currentMoney -= packagingItemsData[1].itemVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updatePackagingNb();
   updateStats();
@@ -38,8 +36,7 @@ function buyCan() {
     STATES.canCurrentNb += 1;
     STATES.currentMoney -= packagingItemsData[2].itemVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updatePackagingNb();
   updateStats();
@@ -50,8 +47,7 @@ function buyBottle() {
     STATES.bottleCurrentNb += 1;
     STATES.currentMoney -= packagingItemsData[3].itemVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updatePackagingNb();
   updateStats();
@@ -64,8 +60,7 @@ function buyBox() {
     STATES.cardboardCurrentNb -= packagingItemsData[4].nbOfCarboardsRequired;
     STATES.bubbleWrapCurrentNb -= packagingItemsData[4].nbOfBubbleWrapsRequired;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error2);
   };
   updatePackagingNb();
   updateStats();
@@ -78,8 +73,7 @@ function buyCase() {
     STATES.canCurrentNb -= packagingItemsData[5].nbOfCanRequired;
     STATES.bottleCurrentNb -= packagingItemsData[5].nbOfBottleRequired;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error2);
   };
   updatePackagingNb();
   updateStats();
@@ -101,13 +95,20 @@ function sendMerchendises() {
       case "money":
         STATES.currentMoney += currentPackagingTask.rewardVal
         break;
+
+      case "Click Power":
+        STATES.clickIncrement += currentPackagingTask.rewardVal;
+        break;
+
+      case "Click Factor":
+        STATES.clickMultiplicator += currentPackagingTask.rewardVal;
+        break;
     }
     STATES.boxCurrentNb -= currentPackagingTask.nbOfBoxesRequired;
     STATES.caseCurrentNb -= currentPackagingTask.nbOfCasesRequired;
     generateNewPackagingTask();
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(["You don't have the requiered packaging!"]);
   }
   updatePackagingNb();
   updateStats();
