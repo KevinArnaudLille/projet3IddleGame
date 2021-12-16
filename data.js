@@ -40,7 +40,7 @@ let STATES = {
 };
 
 // CRYPTO DATA ================================
-let cryptoData = [
+const cryptoData = [
   {
     "cryptoId" : "cryptoA",
     "cryptoName" : "TonyCoin",
@@ -71,7 +71,7 @@ let cryptoData = [
 ];
 
 // SHOP ITEM DATA ===============================
-let shopItemsData = [
+const shopItemsData = [
   {
   "itemId" : "item0",
   "itemPower" : 10,
@@ -102,8 +102,8 @@ let shopItemsData = [
 },
 ]
 
-// PACKAGING ITEM STATS ============================
-let packagingItemsData = [
+// PACKAGING ITEM DATA ============================
+const packagingItemsData = [
   {
     "itemId" : "cardboard",
     "itemName" : "Cardboard",
@@ -147,7 +147,7 @@ let packagingItemsData = [
 ]
 
 // PACKAGING TASK POSSIBILITIES ============
-let packagingTaskData = [
+const packagingTaskData = [
   {
     "taskId" : 0,
     "taskText" : "Some friends want to have a party ! We have to help them !!",
@@ -166,8 +166,8 @@ let packagingTaskData = [
   }
 ]
 
-// NARRATOR TEXT ============================
-let narratorData={
+// NARRATOR TEXT DATA ==========================
+const narratorData={
   "phase0":[
     "Hello1",
     "Hello2",
@@ -180,3 +180,7 @@ let narratorData={
     "Hello7"
   ]
 };
+
+// STORY TRIGGER DATA ============================
+
+const storyProgressBarCheckpoint=[0,0.01];
