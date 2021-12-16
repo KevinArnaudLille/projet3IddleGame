@@ -27,10 +27,20 @@ function MAIN_PROGRESSION() {
       addTextToNarrator(narratorData.phase10);
       STATES.checkpointProgress++;
       STATES.isAutoProgressEnable = true;
-      STATES.currentMoney += (shopItemsData[0].itemCurrentPrice*3);
+      STATES.currentMoney += (shopItemsData[0].itemCurrentPrice * 3);
       launchShopDisplay();
       launchProgressBarUpdateAuto();
       updatePCPower('item0');
+      updateStats();
+      break;
+
+    // Phase 20
+    case STATES.checkpointProgress === 4 && STATES.mainBarProgress >= storyProgressBarCheckpoint[4]:
+      addTextToNarrator(narratorData.phase20);
+      STATES.checkpointProgress++;
+      STATES.currentMoney += 1000;
+      launchCryptoDisplay()
+      launchCryptoRefresh()
       updateStats();
       break;
   }

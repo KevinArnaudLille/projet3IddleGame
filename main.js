@@ -3,16 +3,12 @@
 function updateStats() {
   clickMultiplicator.innerHTML = STATES.clickMultiplicator;
   clickIncrement.innerHTML = STATES.clickIncrement;
-  currentMoney.innerHTML = "$$$ " + STATES.currentMoney;
-  cryptoAInStock.innerHTML = STATES.cryptoAInStock + " TonyCoin";
+  currentMoney.innerHTML = `$$$ ${STATES.currentMoney}`;
+  cryptoAInStock.innerHTML = `${STATES.cryptoAInStock} TonyCoin`;
   cryptoBInStock.innerHTML = STATES.cryptoBInStock + " ClickCoin";
   cryptoCInStock.innerHTML = STATES.cryptoCInStock + " SullyCoin";
   PCPower.innerHTML = "Pc Power " + STATES.PCPower;
 }
-
-function updateAutoProgressBarWithPCPower() {
-
-};
 
 /* -- Taskboard part -- */
 function openTabs(evt, cityName) {

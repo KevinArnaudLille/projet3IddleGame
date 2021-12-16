@@ -36,8 +36,7 @@ function buyCryptoA() {
     STATES.cryptoAInStock += 1;
     STATES.currentMoney -= STATES.cryptoACurrentVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updateStats();
 }
@@ -48,8 +47,7 @@ function sellCryptoA() {
     STATES.cryptoAInStock -= 1;
     STATES.currentMoney += STATES.cryptoACurrentVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error2)
   };
   updateStats();
 }
@@ -59,8 +57,7 @@ function buyCryptoB() {
     STATES.cryptoBInStock += 1;
     STATES.currentMoney -= STATES.cryptoBCurrentVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updateStats();
 }
@@ -70,8 +67,7 @@ function sellCryptoB() {
     STATES.cryptoBInStock -= 1;
     STATES.currentMoney += STATES.cryptoBCurrentVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error2);
   };
   updateStats();
 }
@@ -81,8 +77,7 @@ function buyCryptoC() {
     STATES.cryptoCInStock += 1;
     STATES.currentMoney -= STATES.cryptoCCurrentVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error1)
   };
   updateStats();
 }
@@ -92,8 +87,7 @@ function sellCryptoC() {
     STATES.cryptoCInStock -= 1;
     STATES.currentMoney += STATES.cryptoCCurrentVal;
   } else {
-    // Le narrateur dit un truc
-    console.log("nop");
+    addTextToNarrator(narratorData.error2)
   };
   updateStats();
 }

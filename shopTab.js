@@ -10,8 +10,7 @@ function updatePCPower(itemId){
     STATES.autoProgressSpeed -= item.itemEffectOnAutoProgressSpeed;
     STATES.PCPower += item.itemPower;
   } else {
-    // Narrator here
-    console.log("nop")
+    addTextToNarrator(narratorData.error1);
   }
   updateStats();
 }

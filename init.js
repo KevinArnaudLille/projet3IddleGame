@@ -1,5 +1,7 @@
 // TEST FIELD
 updateStats();
+STATES.mainBarProgress = 1;
+STATES.currentMoney = 50000000;
 
 // Tabs display init
 $("#allBoards").style.display = "none";
@@ -11,12 +13,19 @@ $("#statsTabBtn").style.display = "none";
 
 // A METTRE DANS LA STORY
 
-// launchCryptoDisplay()
-// launchCryptoRefresh()
-
 // launchTaskDisplay()
 // generateNewPackagingTask()
 // updatePackagingNb()
+
+/* Progress bar init */
+let progressBarBorder = $("#progressBarBorder");
+let progressBarContent = $("#progressBarContent");
+let progressText = $("#progressText");
+
+progressBarContent.style.cssText = `
+  width:${STATES.mainBarProgress}%`;
+progressText.innerHTML = `
+  ${STATES.mainBarProgress.toFixed(3)}%`;
 
 /* Shop tab init */
 for (let item of shopItemsData) {

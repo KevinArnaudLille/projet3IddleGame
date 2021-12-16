@@ -178,7 +178,7 @@ const packagingTaskData = [
   },
   {
     "taskId" : 2,
-    "taskText" : "I need supply to give them to a charity center, help me bro.",
+    "taskText" : "I need supply for a charity center, help me my friend.",
     "nbOfBoxesRequired" : 4,
     "nbOfCasesRequired" : 4,
     "rewardType" : "money",
@@ -186,7 +186,7 @@ const packagingTaskData = [
   },
   {
     "taskId" : 3,
-    "taskText" : "Some guy treated me to give them 3 cases help men, they're going to kill me !",
+    "taskText" : "Some guys threaten me for 3 cases help men, they're going to kill me !",
     "nbOfBoxesRequired" : 0,
     "nbOfCasesRequired" : 3,
     "rewardType" : "money",
@@ -201,7 +201,7 @@ const packagingTaskData = [
     "rewardVal" : 2500,
   },
   {
-    "taskId" : 4,
+    "taskId" : 5,
     "taskText" : "I'm going to do a big party for a special occasion but i need some supply to do it, help me man.",
     "nbOfBoxesRequired" : 10,
     "nbOfCasesRequired" : 10,
@@ -243,10 +243,12 @@ const narratorData={
     "Ok it's connected!",
     "You should see a bar autoprogression",
     "It's very slow for now but there is also a shop where you can spend your money to upgrade my computer!",
-    "You don't have money ? Don't worry I "
+    "You don't have money ? Don't worry I'll lend you some",
+    "That's not that much but I may have an idea to generate income",
+    "I'll come back soon, don't forget to click ;) ",
   ],
 };
 
 // STORY TRIGGER DATA ============================
 
-const storyProgressBarCheckpoint=[0,0.18,0.25,0.32];
+const storyProgressBarCheckpoint=[0,0.18,0.25,0.32,0.5];
