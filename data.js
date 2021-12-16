@@ -7,7 +7,7 @@ let STATES = {
   "clickMultiplicator" : 1,
   "autoProgressVal" : 0,
   "autoProgressFactor" : 1,
-  "autoProgressSpeed" : 2000,
+  "autoProgressSpeed" : 5000,
 
   "currentMoney" : 0,
   "PCPower" : 0,
@@ -43,16 +43,16 @@ let STATES = {
 const cryptoData = [
   {
     "cryptoId" : "cryptoA",
-    "cryptoName" : "TonyCoin",
+    "cryptoName" : "ClickCoin",
     "cryptoMinVal" : 1,
     "cryptoMedVal" : 10,
     "cryptoMaxVal" : 20,
-    "cryptoTimeInterval" : 1000,
+    "cryptoTimeInterval" : 1500,
     "cryptoInitCurrentVal" : 10,
   },
   {
     "cryptoId" : "cryptoB",
-    "cryptoName" : "ClickCoin",
+    "cryptoName" : "TonyCoin",
     "cryptoMinVal" : 1,
     "cryptoMedVal" : 20,
     "cryptoMaxVal" : 30,
@@ -61,7 +61,7 @@ const cryptoData = [
   },
   {
     "cryptoId" : "cryptoC",
-    "cryptoName" : "SullyCoin",
+    "cryptoName" : "KekCoin",
     "cryptoMinVal" : 0,
     "cryptoMedVal" : 50,
     "cryptoMaxVal" : 100,
@@ -74,43 +74,43 @@ const cryptoData = [
 const shopItemsData = [
   {
   "itemId" : "item0",
-  "itemPower" : 10,
+  "itemPower" : 1,
   "itemName" : "RAM ",
   "itemInitPrice" : 250,
   "itemCurrentPrice" : 250,
-  "itemEffectOnAutoProgressVal" : 1,
-  "itemEffectOnAutoProgressFactor" : 1,
-  "itemEffectOnAutoProgressSpeed" : 1,
+  "itemEffectOnAutoProgressVal" : 0.0005,
+  "itemEffectOnAutoProgressFactor" : 0.05,
+  "itemEffectOnAutoProgressSpeed" : 0,
 },
 {
   "itemId" : "item1",
-  "itemPower" : 100,
+  "itemPower" : 2,
   "itemName" : "Processor ",
   "itemInitPrice" : 1000,
   "itemCurrentPrice" : 1000,
-  "itemEffectOnAutoProgressVal" : 1,
-  "itemEffectOnAutoProgressFactor" : 1,
-  "itemEffectOnAutoProgressSpeed" : 1,
+  "itemEffectOnAutoProgressVal" : 0.001,
+  "itemEffectOnAutoProgressFactor" : 0.1,
+  "itemEffectOnAutoProgressSpeed" : 15,
 },
 {
   "itemId" : "item2",
-  "itemPower" : 1000,
+  "itemPower" : 4,
   "itemName" : "Graphic Card ",
   "itemInitPrice" : 5000,
   "itemCurrentPrice" : 5000,
-  "itemEffectOnAutoProgressVal" : 1,
-  "itemEffectOnAutoProgressFactor" : 1,
-  "itemEffectOnAutoProgressSpeed" : 1,
+  "itemEffectOnAutoProgressVal" : 0.002,
+  "itemEffectOnAutoProgressFactor" : 0.4,
+  "itemEffectOnAutoProgressSpeed" : 30,
 },
 {
   "itemId" : "item3",
-  "itemPower" : 10000,
+  "itemPower" : 10,
   "itemName" : "NASA Cloud Subscription ",
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,
-  "itemEffectOnAutoProgressVal" : 1,
-  "itemEffectOnAutoProgressFactor" : 1,
-  "itemEffectOnAutoProgressSpeed" : 1,
+  "itemEffectOnAutoProgressVal" : 0.005,
+  "itemEffectOnAutoProgressFactor" : 0.6,
+  "itemEffectOnAutoProgressSpeed" : 60,
 },
 ]
 
@@ -119,42 +119,42 @@ const packagingItemsData = [
   {
     "itemId" : "cardboard",
     "itemName" : "Cardboard",
-    "itemVal" : 100,
+    "itemVal" : 10,
     "isCombined" : false
   },
   {
     "itemId" : "bubbleWrap",
     "itemName" : "Bubble wrap",
-    "itemVal" : 1,
+    "itemVal" : 4,
     "isCombined" : false
   },
   {
     "itemId" : "can",
     "itemName" : "Can",
-    "itemVal" : 200,
+    "itemVal" : 12,
     "isCombined" : false
   },
   {
     "itemId" : "bottle",
     "itemName" : "Bottle",
-    "itemVal" : 150,
+    "itemVal" : 15,
     "isCombined" : false
   },
   {
     "itemId" : "box",
     "itemName" : "Box",
-    "itemVal" : 300,
+    "itemVal" : 25,
     "isCombined" : true,
-    "nbOfCarboardsRequired" : 4,
-    "nbOfBubbleWrapsRequired" : 20,
+    "nbOfCarboardsRequired" : 5,
+    "nbOfBubbleWrapsRequired" : 15,
   },
   {
     "itemId" : "case",
     "itemName" : "Case",
-    "itemVal" : 500,
+    "itemVal" : 50,
     "isCombined" : true,
-    "nbOfCanRequired" : 17,
-    "nbOfBottleRequired" : 9,
+    "nbOfCanRequired" : 10,
+    "nbOfBottleRequired" : 7,
   }
 ]
 
@@ -166,16 +166,48 @@ const packagingTaskData = [
     "nbOfBoxesRequired" : 1,
     "nbOfCasesRequired" : 3,
     "rewardType" : "money",
-    "rewardVal" : 1000
+    "rewardVal" : 1200,
   },
   {
     "taskId" : 1,
-    "taskText" : "Prout",
+    "taskText" : "I'm out of boxes and cases, can you help me out please ?",
     "nbOfBoxesRequired" : 2,
     "nbOfCasesRequired" : 1,
     "rewardType" : "money",
-    "rewardVal" : 1500
-  }
+    "rewardVal" : 500,
+  },
+  {
+    "taskId" : 2,
+    "taskText" : "I need supply to give them to a charity center, help me bro.",
+    "nbOfBoxesRequired" : 4,
+    "nbOfCasesRequired" : 4,
+    "rewardType" : "money",
+    "rewardVal" : 1500,
+  },
+  {
+    "taskId" : 3,
+    "taskText" : "Some guy treated me to give them 3 cases help men, they're going to kill me !",
+    "nbOfBoxesRequired" : 0,
+    "nbOfCasesRequired" : 3,
+    "rewardType" : "money",
+    "rewardVal" : 1000,
+  },
+  {
+    "taskId" : 4,
+    "taskText" : "A church need supply for orphans, you can't abandon me on this...",
+    "nbOfBoxesRequired" : 7,
+    "nbOfCasesRequired" : 6,
+    "rewardType" : "money",
+    "rewardVal" : 2500,
+  },
+  {
+    "taskId" : 4,
+    "taskText" : "I'm going to do a big party for a special occasion but i need some supply to do it, help me man.",
+    "nbOfBoxesRequired" : 10,
+    "nbOfCasesRequired" : 10,
+    "rewardType" : "money",
+    "rewardVal" : 5000,
+  },
 ]
 
 // NARRATOR TEXT DATA ==========================
