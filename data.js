@@ -180,19 +180,41 @@ const packagingTaskData = [
 
 // NARRATOR TEXT DATA ==========================
 const narratorData={
-  "phase0":[
-    "Hello1",
-    "Hello2",
-    "Hello3",
-    "Hello4"
+  "error1":[
+    "You don't have enough money",
   ],
-  "phase1":[
-    "Hello5",
-    "Hello6",
-    "Hello7"
-  ]
+  "error2":[
+    "You can't do that now"
+  ],
+  "phase00":[
+    "Oh! \\o/ Finally someone is here \\o/! Wait wait wait!",
+    "Please just listen to me",
+    "I'm Nathan by the way ;) ",
+    "Last day, I met an old bearded man that predents to know the way to find The Meaning Of Life!",
+    "Believe me or not, I trust him, just follows his instructions and finds myself on this webpage",
+    "You see that progress bar ? We need to complete it and then The Meaning Of Life will be revealed!",
+    "You seem quite sharp, I'm sure you already guess how we will proceed",
+    "Yes! By clicking! I'll try to help you but I'm currently busy :/ sorry",
+    "Give it a try!"
+  ],
+  "phase01":[
+    "You get it! Keep going!!",
+  ],  
+  "phase02":
+  [
+    "So ... do you find this funny ?",
+    "I guess not, but don't worry I'm now available to help ;)",
+    "Let me just connect my computer to yours, don't stop clicking!"
+  ],
+  "phase10":
+  [
+    "Ok it's connected!",
+    "You should see a bar autoprogression",
+    "It's very slow for now but there is also a shop where you can spend your money to upgrade my computer!",
+    "You don't have money ? Don't worry I "
+  ],
 };
 
 // STORY TRIGGER DATA ============================
 
-const storyProgressBarCheckpoint=[0,0.01];
+const storyProgressBarCheckpoint=[0,0.18,0.25,0.32];

@@ -10,18 +10,13 @@ $("#taskTabBtn").style.display = "none";
 $("#statsTabBtn").style.display = "none";
 
 // A METTRE DANS LA STORY
-STATES.isAutoProgressEnable = true;
-launchShopDisplay();
-launchProgressBarUpdateAuto();
-STATES.autoProgressVal = 0.001;
-STATES.currentMoney = 40000;
 
-launchCryptoDisplay()
-launchCryptoRefresh()
+// launchCryptoDisplay()
+// launchCryptoRefresh()
 
-launchTaskDisplay()
-generateNewPackagingTask()
-updatePackagingNb()
+// launchTaskDisplay()
+// generateNewPackagingTask()
+// updatePackagingNb()
 
 /* Shop tab init */
 for (let item of shopItemsData) {

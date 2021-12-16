@@ -50,9 +50,9 @@ async function addTextToNarrator(textList) {
     let narratorTextPlace = $("#narratorTextPlace");
     narratorTextPlace.insertAdjacentHTML(
       "beforeend",
-      `${text}<br/>`
+      `${text} ... <br/>`
     )
     narratorTextPlace.scroll(0, Math.pow(10, 10));
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, (80*text.length)));
   }
 }
