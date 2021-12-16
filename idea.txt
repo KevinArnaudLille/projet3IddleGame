@@ -1,13 +1,2 @@
-|-- Global :
-Scripts are organized in 4 files:
-- data.js where are all data as jsons or lists
-- main.js where are all the functions that make the page living (ex: all the launch function that trigger components appearances)
-- progress.js where is the main function that contain the switch that lead the story. A checkpoint value is checked and increment for each case to avoid repetition. Launcher of late component are triggered here.
-- init.js that init and launch the beginning 
-
-interval loops with different timeset for 3 crypto
-
-the main progress function is trigger at each bar progression
-
 |-- Narrator Text :
 Im "" and you are ? Oh i'm "your name". We don’t have much time for your name, let’s get started.

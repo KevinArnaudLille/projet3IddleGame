@@ -78,6 +78,9 @@ const shopItemsData = [
   "itemName" : "RAM ",
   "itemInitPrice" : 250,
   "itemCurrentPrice" : 250,
+  "itemEffectOnAutoProgressVal" : 1,
+  "itemEffectOnAutoProgressFactor" : 1,
+  "itemEffectOnAutoProgressSpeed" : 1,
 },
 {
   "itemId" : "item1",
@@ -85,6 +88,9 @@ const shopItemsData = [
   "itemName" : "Processor ",
   "itemInitPrice" : 1000,
   "itemCurrentPrice" : 1000,
+  "itemEffectOnAutoProgressVal" : 1,
+  "itemEffectOnAutoProgressFactor" : 1,
+  "itemEffectOnAutoProgressSpeed" : 1,
 },
 {
   "itemId" : "item2",
@@ -92,6 +98,9 @@ const shopItemsData = [
   "itemName" : "Graphic Card ",
   "itemInitPrice" : 5000,
   "itemCurrentPrice" : 5000,
+  "itemEffectOnAutoProgressVal" : 1,
+  "itemEffectOnAutoProgressFactor" : 1,
+  "itemEffectOnAutoProgressSpeed" : 1,
 },
 {
   "itemId" : "item3",
@@ -99,6 +108,9 @@ const shopItemsData = [
   "itemName" : "NASA Cloud Subscription ",
   "itemInitPrice" : 15000,
   "itemCurrentPrice" : 15000,
+  "itemEffectOnAutoProgressVal" : 1,
+  "itemEffectOnAutoProgressFactor" : 1,
+  "itemEffectOnAutoProgressSpeed" : 1,
 },
 ]
 
