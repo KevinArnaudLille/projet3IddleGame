@@ -10,6 +10,10 @@ function updateStats() {
   PCPower.innerHTML = "Pc Power " + STATES.PCPower;
 }
 
+function updateAutoProgressBarWithPCPower() {
+
+};
+
 /* -- Taskboard part -- */
 function openTabs(evt, cityName) {
   // Declare all variables
@@ -32,4 +36,16 @@ function openTabs(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-/* Shop tab */
+function launchShopDisplay() {
+  $("#allBoards").style.display = "flex";
+  $("#Shop").style.display = "block";
+}
+
+function launchCryptoDisplay() {
+  $("#cryptoStatsBox").style.display = "block";
+  $("#cryptoTabBtn").style.display = "inline";
+}
+
+function launchTaskDisplay() {
+  $("#taskTabBtn").style.display = "inline";
+}

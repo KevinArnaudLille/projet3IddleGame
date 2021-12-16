@@ -1,12 +1,27 @@
 // TEST FIELD
-STATES.currentMoney = 40000;
 updateStats();
-launchCryptoRefresh();
-updatePackagingNb()
-generateNewPackagingTask()
+
+// Tabs display init
+$("#allBoards").style.display = "none";
+$("#Shop").style.display = "block";
+$("#cryptoStatsBox").style.display = "none";
+$("#cryptoTabBtn").style.display = "none";
+$("#taskTabBtn").style.display = "none";
+$("#statsTabBtn").style.display = "none";
+
+// A METTRE DANS LA STORY
 STATES.isAutoProgressEnable = true;
+launchShopDisplay();
+launchProgressBarUpdateAuto();
 STATES.autoProgressVal = 0.001;
-launchProgressBarUpdateAuto()
+STATES.currentMoney = 40000;
+
+launchCryptoDisplay()
+launchCryptoRefresh()
+
+launchTaskDisplay()
+generateNewPackagingTask()
+updatePackagingNb()
 
 /* Shop tab init */
 for (let item of shopItemsData) {
@@ -23,13 +38,12 @@ for (let crypto of cryptoData) {
 }
 
 // Packaging task init
-for (let item of packagingItemsData){
-  console.log(item)
+for (let item of packagingItemsData) {
   $(`#${item.itemId}Btn`).innerHTML = `${item.itemName} - ${item.itemVal}$`;
 }
-$(`#boxBtn`).insertAdjacentHTML("beforeend",` + ${packagingItemsData[4].nbOfCarboardsRequired} ${packagingItemsData[0].itemName} + ${packagingItemsData[4].nbOfBubbleWrapsRequired} ${packagingItemsData[1].itemName}`);
+$(`#boxBtn`).insertAdjacentHTML("beforeend", ` + ${packagingItemsData[4].nbOfCarboardsRequired} ${packagingItemsData[0].itemName} + ${packagingItemsData[4].nbOfBubbleWrapsRequired} ${packagingItemsData[1].itemName}`);
 
-$(`#caseBtn`).insertAdjacentHTML("beforeend",` + ${packagingItemsData[5].nbOfCanRequired} ${packagingItemsData[2].itemName} + ${packagingItemsData[5].nbOfBottleRequired} ${packagingItemsData[3].itemName}`);
+$(`#caseBtn`).insertAdjacentHTML("beforeend", ` + ${packagingItemsData[5].nbOfCanRequired} ${packagingItemsData[2].itemName} + ${packagingItemsData[5].nbOfBottleRequired} ${packagingItemsData[3].itemName}`);
 
 // LET'S GO
 MAIN_PROGRESSION()
