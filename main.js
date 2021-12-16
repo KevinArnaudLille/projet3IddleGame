@@ -61,13 +61,13 @@ async function addTextToNarrator(textList) {
 /* ====== Boards section ====== */
 /* -- Statsboard part -- */
 function updateStats() {
-  clickMultiplicator.innerHTML = STATES.clickMultiplicator;
-  clickIncrement.innerHTML = STATES.clickIncrement;
-  currentMoney.innerHTML = STATES.currentMoney;
-  cryptoAInStock.innerHTML = STATES.cryptoAInStock;
-  cryptoBInStock.innerHTML = STATES.cryptoBInStock;
-  cryptoCInStock.innerHTML = STATES.cryptoCInStock;
-  PCPower.innerHTML = STATES.PCPower;
+  clickMultiplicator.innerHTML = "Click Multiplicator " + STATES.clickMultiplicator;
+  clickIncrement.innerHTML = "Click Increment " + STATES.clickIncrement;
+  currentMoney.innerHTML = "Money " + STATES.currentMoney;
+  cryptoAInStock.innerHTML = STATES.cryptoAInStock + " TonyCoin";
+  cryptoBInStock.innerHTML = STATES.cryptoBInStock + " ClickCoin";
+  cryptoCInStock.innerHTML = STATES.cryptoCInStock + " SullyCoin";
+  PCPower.innerHTML = "Pc Power " + STATES.PCPower;
 }
 
 /* -- Taskboard part -- */
