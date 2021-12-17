@@ -24,35 +24,35 @@ function MAIN_PROGRESSION() {
 
     // Phase 10
     case STATES.checkpointProgress === 3 && STATES.mainBarProgress >= storyProgressBarCheckpoint[3]:
-      caseProgressUpdate(narratorData.phase10);
       STATES.isAutoProgressEnable = true;
       STATES.currentMoney += (shopItemsData[0].itemCurrentPrice * 3);
       STATES.isPlayerPoor = true;
       launchShopDisplay();
       launchProgressBarUpdateAuto();
       updatePCPower('item0');
+      caseProgressUpdate(narratorData.phase10);
       break;
 
     // Phase 20
     case STATES.checkpointProgress === 4 && STATES.mainBarProgress >= storyProgressBarCheckpoint[4]:
-      caseProgressUpdate(narratorData.phase20);
       STATES.currentMoney += 1000;
       launchCryptoDisplay()
       launchCryptoRefresh()
+      caseProgressUpdate(narratorData.phase20);
       break;
 
     case STATES.checkpointProgress === 5 && STATES.mainBarProgress >= storyProgressBarCheckpoint[5]:
-      caseProgressUpdate(narratorData.phase21);
       STATES.clickIncrement += 0.001;
       STATES.clickMultiplicator += 0.1;
+      caseProgressUpdate(narratorData.phase21);
       break;
 
     case STATES.checkpointProgress === 6 && STATES.mainBarProgress >= storyProgressBarCheckpoint[6]:
-      caseProgressUpdate(narratorData.phase30);
       STATES.currentMoney += 1000;
       launchTaskDisplay()
       generateNewPackagingTask()
       updatePackagingNb()
+      caseProgressUpdate(narratorData.phase30);
       break;
 
     case STATES.mainBarProgress >= 100:
