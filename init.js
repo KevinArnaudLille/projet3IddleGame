@@ -1,6 +1,5 @@
 // TEST FIELD
 updateStats();
-STATES.mainBarProgress = 3;
 
 // Tabs display init
 $("#allBoards").style.display = "none";
