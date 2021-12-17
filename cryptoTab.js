@@ -12,7 +12,7 @@ function launchCryptoRefresh() {
   // crypto B
   STATES.cryptoBCurrentVal = cryptoData[1].cryptoInitCurrentVal;
   setInterval(() => {
-    STATES.cryptoBCurrentVal = Math.round(cryptoData[1].cryptoMinVal + ((cryptoData[1].cryptoMaxVal - cryptoData[1].cryptoMinVal) * randn_bm()));
+    STATES.cryptoBCurrentVal = Math.round(cryptoData[1].cryptoMinVal + ((cryptoData[1].cryptoMaxVal - cryptoData[1].cryptoMinVal) * Math.random()));
     UpdateCryptoVal();
   }, cryptoData[1].cryptoTimeInterval);
 
@@ -37,7 +37,7 @@ function buyCryptoA() {
     STATES.currentMoney -= STATES.cryptoACurrentVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updateStats();
 }
 
@@ -48,7 +48,7 @@ function sellCryptoA() {
     STATES.currentMoney += STATES.cryptoACurrentVal;
   } else {
     addTextToNarrator(narratorData.error2)
-  };
+  }
   updateStats();
 }
 
@@ -58,7 +58,7 @@ function buyCryptoB() {
     STATES.currentMoney -= STATES.cryptoBCurrentVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updateStats();
 }
 
@@ -68,7 +68,7 @@ function sellCryptoB() {
     STATES.currentMoney += STATES.cryptoBCurrentVal;
   } else {
     addTextToNarrator(narratorData.error2);
-  };
+  }
   updateStats();
 }
 
@@ -78,7 +78,7 @@ function buyCryptoC() {
     STATES.currentMoney -= STATES.cryptoCCurrentVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updateStats();
 }
 
@@ -88,6 +88,6 @@ function sellCryptoC() {
     STATES.currentMoney += STATES.cryptoCCurrentVal;
   } else {
     addTextToNarrator(narratorData.error2)
-  };
+  }
   updateStats();
 }

@@ -7,7 +7,7 @@ function updatePackagingNb() {
   ${STATES.bottleCurrentNb} ${packagingItemsData[3].itemName} //-//
   ${STATES.boxCurrentNb} ${packagingItemsData[4].itemName} //
   ${STATES.caseCurrentNb} ${packagingItemsData[5].itemName}`
-};
+}
 
 function buyCardboard() {
   if (STATES.currentMoney >= packagingItemsData[0].itemVal) {
@@ -15,7 +15,7 @@ function buyCardboard() {
     STATES.currentMoney -= packagingItemsData[0].itemVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updatePackagingNb();
   updateStats();
 }
@@ -26,7 +26,7 @@ function buyBubbleWrap() {
     STATES.currentMoney -= packagingItemsData[1].itemVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updatePackagingNb();
   updateStats();
 }
@@ -37,7 +37,7 @@ function buyCan() {
     STATES.currentMoney -= packagingItemsData[2].itemVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updatePackagingNb();
   updateStats();
 }
@@ -48,7 +48,7 @@ function buyBottle() {
     STATES.currentMoney -= packagingItemsData[3].itemVal;
   } else {
     addTextToNarrator(narratorData.error1)
-  };
+  }
   updatePackagingNb();
   updateStats();
 }
@@ -61,7 +61,7 @@ function buyBox() {
     STATES.bubbleWrapCurrentNb -= packagingItemsData[4].nbOfBubbleWrapsRequired;
   } else {
     addTextToNarrator(narratorData.error2);
-  };
+  }
   updatePackagingNb();
   updateStats();
 }
@@ -74,7 +74,7 @@ function buyCase() {
     STATES.bottleCurrentNb -= packagingItemsData[5].nbOfBottleRequired;
   } else {
     addTextToNarrator(narratorData.error2);
-  };
+  }
   updatePackagingNb();
   updateStats();
 }

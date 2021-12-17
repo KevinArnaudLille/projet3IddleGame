@@ -61,6 +61,23 @@ function MAIN_PROGRESSION() {
       updatePackagingNb()
       updateStats();
       break;
+
+    case STATES.mainBarProgress >= 100:
+      addTextToNarrator(narratorData.phase99);
+      STATES.mainBarProgress = 100;
+      STATES.clickIncrement = 0;
+      STATES.clickMultiplicator = 0;
+      STATES.autoProgressFactor = 0;
+      STATES.autoProgressSpeed = 0;
+      STATES.autoProgressVal = 0;
+      $("#allBoards").style.display = "none";
+      $("#Shop").style.display = "block";
+      $("#cryptoStatsBox").style.display = "none";
+      $("#cryptoTabBtn").style.display = "none";
+      $("#taskTabBtn").style.display = "none";
+      $("#statsTabBtn").style.display = "none";
+      updateStats();
+      break;
   }
 
   setTimeout(() => MAIN_PROGRESSION(), 10)

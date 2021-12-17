@@ -47,7 +47,7 @@ const cryptoData = [
     "cryptoMinVal" : 1,
     "cryptoMedVal" : 10,
     "cryptoMaxVal" : 20,
-    "cryptoTimeInterval" : 2222,
+    "cryptoTimeInterval" : 3333,
     "cryptoInitCurrentVal" : 10,
   },
   {
@@ -62,7 +62,7 @@ const cryptoData = [
   {
     "cryptoId" : "cryptoC",
     "cryptoName" : "KekCoin",
-    "cryptoMinVal" : 1,
+    "cryptoMinVal" : 500,
     "cryptoMedVal" : 1000,
     "cryptoMaxVal" : 2000,
     "cryptoTimeInterval" : 33333,
@@ -94,23 +94,23 @@ const shopItemsData = [
 },
 {
   "itemId" : "item2",
-  "itemPower" : 4,
+  "itemPower" : 5,
   "itemName" : "Graphic Card",
   "itemInitPrice" : 5000,
   "itemCurrentPrice" : 5000,
   "itemEffectOnAutoProgressVal" : 0.002,
-  "itemEffectOnAutoProgressFactor" : 0.4,
+  "itemEffectOnAutoProgressFactor" : 0.2,
   "itemEffectOnAutoProgressSpeed" : 30,
 },
 {
   "itemId" : "item3",
   "itemPower" : 10,
   "itemName" : "NASA Cloud Subs",
-  "itemInitPrice" : 15000,
-  "itemCurrentPrice" : 15000,
+  "itemInitPrice" : 20000,
+  "itemCurrentPrice" : 20000,
   "itemEffectOnAutoProgressVal" : 0.005,
-  "itemEffectOnAutoProgressFactor" : 0.6,
-  "itemEffectOnAutoProgressSpeed" : 60,
+  "itemEffectOnAutoProgressFactor" : 0.5,
+  "itemEffectOnAutoProgressSpeed" : 100,
 },
 ]
 
@@ -272,6 +272,11 @@ const narratorData={
     "This one will let you help me with my transport company. If you're packaging what I'll ask, you'll unlock some amazing reward!",
     "Here is some money to get start ;) That's the last time I'm doing this so, beginning now, you need to be very cautious with your money",
     "Good luck, I'm counting on you !"
+  ],
+  "phase99":
+  [
+    "Well play you did it!",
+    "Anyway, bye bye thanks for all the upgrades and packaging ;)"
   ],
 };
 

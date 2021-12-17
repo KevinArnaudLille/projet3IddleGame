@@ -20,13 +20,13 @@ function randn_bm() {
 function progressBarUpdateByClick() {
   STATES.mainBarProgress += (STATES.clickMultiplicator * STATES.clickIncrement);
   progressBarVisualUpdate()
-};
+}
 
 function launchProgressBarUpdateAuto() {
   STATES.mainBarProgress += STATES.autoProgressFactor * STATES.autoProgressVal;
   progressBarVisualUpdate()
   setTimeout(() => launchProgressBarUpdateAuto(), STATES.autoProgressSpeed);
-};
+}
 
 function progressBarVisualUpdate() {
   progressBarContent.style.cssText = `
@@ -37,7 +37,7 @@ function progressBarVisualUpdate() {
 
 /* ====== Narrator Textbox section ====== */
 async function addTextToNarrator(textList) {
-  for (text of textList) {
+  for (let text of textList) {
     let narratorTextPlace = $("#narratorTextPlace");
     narratorTextPlace.insertAdjacentHTML(
       "beforeend",
