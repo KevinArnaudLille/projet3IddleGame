@@ -1,3 +1,5 @@
+// A REFACTORISER !!
+
 /* Task tab */
 function updatePackagingNb() {
   $("#packagingItemsCurrentNb").innerHTML = `You have 
@@ -16,6 +18,7 @@ function buyCardboard() {
   } else {
     addTextToNarrator(narratorData.error1)
   }
+
   updatePackagingNb();
   updateStats();
 }
@@ -27,6 +30,7 @@ function buyBubbleWrap() {
   } else {
     addTextToNarrator(narratorData.error1)
   }
+
   updatePackagingNb();
   updateStats();
 }
@@ -38,6 +42,7 @@ function buyCan() {
   } else {
     addTextToNarrator(narratorData.error1)
   }
+
   updatePackagingNb();
   updateStats();
 }
@@ -49,6 +54,7 @@ function buyBottle() {
   } else {
     addTextToNarrator(narratorData.error1)
   }
+
   updatePackagingNb();
   updateStats();
 }
@@ -81,15 +87,19 @@ function buyCase() {
 
 function generateNewPackagingTask() {
   console.log("New task generated");
+
   let newPackagingTask = packagingTaskData[Math.floor(Math.random() * packagingTaskData.length)];
   $("#merchendisesToSendDescription").innerHTML = newPackagingTask.taskText;
+
   $("#sendMerchendisesBtn").innerHTML = `SEND ${newPackagingTask.nbOfBoxesRequired} Boxes + ${newPackagingTask.nbOfCasesRequired} Cases`;
+
   $("#taskReward").innerHTML = `Reward - ${newPackagingTask.rewardVal} ${newPackagingTask.rewardType}`
   STATES.currentPackagingTask = newPackagingTask.taskId
 }
 
 function sendMerchendises() {
   let currentPackagingTask = packagingTaskData[STATES.currentPackagingTask]
+
   if (STATES.boxCurrentNb >= currentPackagingTask.nbOfBoxesRequired && STATES.caseCurrentNb >= currentPackagingTask.nbOfCasesRequired) {
     switch (currentPackagingTask.rewardType) {
       case "money":
@@ -104,12 +114,15 @@ function sendMerchendises() {
         STATES.clickMultiplicator += currentPackagingTask.rewardVal;
         break;
     }
+
     STATES.boxCurrentNb -= currentPackagingTask.nbOfBoxesRequired;
     STATES.caseCurrentNb -= currentPackagingTask.nbOfCasesRequired;
     generateNewPackagingTask();
+
   } else {
     addTextToNarrator(["You don't have the requiered packaging!"]);
   }
+
   updatePackagingNb();
   updateStats();
 }

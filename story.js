@@ -1,66 +1,58 @@
+function caseProgressUpdate(text){
+  addTextToNarrator(text);
+  STATES.checkpointProgress++;
+  updateStats();
+}
+
 function MAIN_PROGRESSION() {
 
   switch (true) {
     // Phase 00
     case STATES.checkpointProgress === 0 && STATES.mainBarProgress >= storyProgressBarCheckpoint[0]:
-      addTextToNarrator(narratorData.phase00);
-      STATES.checkpointProgress++;
-      updateStats();
+      caseProgressUpdate(narratorData.phase00);
       break;
 
     // Phase 01
     case STATES.checkpointProgress === 1 && STATES.mainBarProgress >= storyProgressBarCheckpoint[1]:
-      addTextToNarrator(narratorData.phase01);
-      STATES.checkpointProgress++;
-      updateStats();
+      caseProgressUpdate(narratorData.phase01);
       break;
 
     // Phase 02
     case STATES.checkpointProgress === 2 && STATES.mainBarProgress >= storyProgressBarCheckpoint[2]:
-      addTextToNarrator(narratorData.phase02);
-      STATES.checkpointProgress++;
-      updateStats();
+      caseProgressUpdate(narratorData.phase02);
       break;
 
     // Phase 10
     case STATES.checkpointProgress === 3 && STATES.mainBarProgress >= storyProgressBarCheckpoint[3]:
-      addTextToNarrator(narratorData.phase10);
-      STATES.checkpointProgress++;
+      caseProgressUpdate(narratorData.phase10);
       STATES.isAutoProgressEnable = true;
       STATES.currentMoney += (shopItemsData[0].itemCurrentPrice * 3);
       STATES.isPlayerPoor = true;
       launchShopDisplay();
       launchProgressBarUpdateAuto();
       updatePCPower('item0');
-      updateStats();
       break;
 
     // Phase 20
     case STATES.checkpointProgress === 4 && STATES.mainBarProgress >= storyProgressBarCheckpoint[4]:
-      addTextToNarrator(narratorData.phase20);
-      STATES.checkpointProgress++;
+      caseProgressUpdate(narratorData.phase20);
       STATES.currentMoney += 1000;
       launchCryptoDisplay()
       launchCryptoRefresh()
-      updateStats();
       break;
 
     case STATES.checkpointProgress === 5 && STATES.mainBarProgress >= storyProgressBarCheckpoint[5]:
-      addTextToNarrator(narratorData.phase21);
+      caseProgressUpdate(narratorData.phase21);
       STATES.clickIncrement += 0.001;
       STATES.clickMultiplicator += 0.1;
-      STATES.checkpointProgress++;
-      updateStats();
       break;
 
     case STATES.checkpointProgress === 6 && STATES.mainBarProgress >= storyProgressBarCheckpoint[6]:
-      addTextToNarrator(narratorData.phase30);
-      STATES.checkpointProgress++;
+      caseProgressUpdate(narratorData.phase30);
       STATES.currentMoney += 1000;
       launchTaskDisplay()
       generateNewPackagingTask()
       updatePackagingNb()
-      updateStats();
       break;
 
     case STATES.mainBarProgress >= 100:

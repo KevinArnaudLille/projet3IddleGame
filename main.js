@@ -4,30 +4,33 @@ function updateStats() {
   clickMultiplicator.innerHTML = STATES.clickMultiplicator;
   clickIncrement.innerHTML = STATES.clickIncrement.toFixed(3);
   currentMoney.innerHTML = `$$$ ${STATES.currentMoney}`;
-  cryptoAInStock.innerHTML = `${STATES.cryptoAInStock} ClickCoin`;
-  cryptoBInStock.innerHTML = `${STATES.cryptoBInStock} TonyCoin`;
-  cryptoCInStock.innerHTML = `${STATES.cryptoCInStock} KekCoin`;
+  cryptoAInStock.innerHTML = `${cryptoA.cryptoStock} ClickCoin`;
+  cryptoBInStock.innerHTML = `${cryptoB.cryptoStock} TonyCoin`;
+  cryptoCInStock.innerHTML = `${cryptoC.cryptoStock} KekCoin`;
   PCPower.innerHTML = `Pc Power ${STATES.PCPower}`;
+
+  STATES.cryptoACurrentVal = cryptoA.cryptoVal;
+  STATES.cryptoAInStock = cryptoA.cryptoStock;
+  STATES.cryptoBCurrentVal = cryptoB.cryptoVal;
+  STATES.cryptoBInStock = cryptoB.cryptoStock;
+  STATES.cryptoCCurrentVal = cryptoC.cryptoVal;
+  STATES.cryptoCInStock = cryptoC.cryptoStock;
 }
 
 /* -- Taskboard part -- */
 function openTabs(evt, name) {
-  // Declare all variables
   let i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabContent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Get all elements with class="tablinks" and remove the class "active"
   tablinks = document.getElementsByClassName("tabLinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(name).style.display = "block";
   evt.currentTarget.className += " active";
 }
@@ -47,26 +50,14 @@ function launchTaskDisplay() {
 }
 
 // Events
-let shopTabBtn = $("#shopTabBtn");
-shopTabBtn.addEventListener("click", (e) => openTabs(e, `Shop`));
-shopTabBtn.addEventListener("keypress", (e) => {
+function generateTabBtnEvent(idBtn,idTab){
+  let tabBtn = $(idBtn);
+  tabBtn.addEventListener("click", (e) => openTabs(e, idTab));
+  tabBtn.addEventListener("keypress", (e) => {
   e.preventDefault();
 });
+}
 
-let cryptoTabBtn = $("#cryptoTabBtn");
-cryptoTabBtn.addEventListener("click", (e) => openTabs(e, `Crypto`));
-cryptoTabBtn.addEventListener("keypress", (e) => {
-  e.preventDefault();
-});
-
-let taskTabBtn = $("#taskTabBtn");
-taskTabBtn.addEventListener("click", (e) => openTabs(e, `Task`));
-taskTabBtn.addEventListener("keypress", (e) => {
-  e.preventDefault();
-});
-
-let statsTabBtn = $("#statsTabBtn");
-statsTabBtn.addEventListener("click", (e) => openTabs(e, `Stats`));
-statsTabBtn.addEventListener("keypress", (e) => {
-  e.preventDefault();
-});
+generateTabBtnEvent("#shopTabBtn",`Shop`);
+generateTabBtnEvent("#cryptoTabBtn",`Crypto`);
+generateTabBtnEvent("#taskTabBtn",`Task`);

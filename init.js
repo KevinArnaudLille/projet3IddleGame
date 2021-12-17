@@ -36,7 +36,7 @@ for (let crypto of cryptoData) {
 
 // Packaging task init
 for (let item of packagingItemsData) {
-  $(`#${item.itemId}Btn`).innerHTML = `${item.itemName} - ${item.itemVal}$`;
+  $(`#${item.itemId}Btn`).innerHTML = `${item.itemName} = ${item.itemVal}$`;
 }
 $(`#boxBtn`).insertAdjacentHTML("beforeend", ` + ${packagingItemsData[4].nbOfCarboardsRequired} ${packagingItemsData[0].itemName} + ${packagingItemsData[4].nbOfBubbleWrapsRequired} ${packagingItemsData[1].itemName}`);
 

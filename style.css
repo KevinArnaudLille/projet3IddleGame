@@ -263,7 +263,6 @@ body {
 .tabLinks {
   background-color: inherit;
   float: left;
-  /* border: none; */
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
@@ -347,6 +346,9 @@ font-size: 2.2rem;
 }
 
 #sendMerchendisesBtn{
+  background-color: var(--main-color-d);
+  color: white;
+  padding: 5px;
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -369,9 +371,11 @@ font-size: 2.2rem;
 .basicPackagingBtn{
   font-size: 1.2rem;
   margin:3px;
+  background-color: var(--main-color-a);
 }
 
 .combinedPackaging{
   font-size: 1.3rem;
   margin:5px;
+  background-color: var(--main-color-b);
 }
