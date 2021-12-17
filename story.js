@@ -28,6 +28,7 @@ function MAIN_PROGRESSION() {
       STATES.checkpointProgress++;
       STATES.isAutoProgressEnable = true;
       STATES.currentMoney += (shopItemsData[0].itemCurrentPrice * 3);
+      STATES.isPlayerPoor = true;
       launchShopDisplay();
       launchProgressBarUpdateAuto();
       updatePCPower('item0');
@@ -76,9 +77,20 @@ function MAIN_PROGRESSION() {
       $("#cryptoTabBtn").style.display = "none";
       $("#taskTabBtn").style.display = "none";
       $("#statsTabBtn").style.display = "none";
+      STATES.isGameEnded = true;
       updateStats();
       break;
   }
 
-  setTimeout(() => MAIN_PROGRESSION(), 10)
+  if (STATES.currentMoney <= 10 && STATES.isPlayerPoor){
+    console.log("lol");
+    STATES.currentMoney += 200;
+    STATES.isPlayerPoor = false;
+    setTimeout(() => STATES.isPlayerPoor = true,10000);
+    updateStats();
+  }
+
+  if (!STATES.isGameEnded){
+    setTimeout(() => MAIN_PROGRESSION(), 10)
+  }
 }

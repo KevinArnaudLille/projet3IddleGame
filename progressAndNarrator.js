@@ -51,3 +51,6 @@ async function addTextToNarrator(textList) {
 // Events
 let clickIdleBtn = $("#clickIdleBtn");
 clickIdleBtn.addEventListener("click", progressBarUpdateByClick);
+clickIdleBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});

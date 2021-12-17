@@ -37,6 +37,8 @@ let STATES = {
   "isShopEnable" : false,
   "isCryptoEnable" : false,
   "isTaskEnable" : false,
+  "isPlayerPoor" : false,
+  "isGameEnded" : false,
 };
 
 // CRYPTO DATA ================================
@@ -53,7 +55,7 @@ const cryptoData = [
   {
     "cryptoId" : "cryptoB",
     "cryptoName" : "TonyCoin",
-    "cryptoMinVal" : 1,
+    "cryptoMinVal" : 50,
     "cryptoMedVal" : 100,
     "cryptoMaxVal" : 200,
     "cryptoTimeInterval" : 5555,
@@ -218,6 +220,10 @@ const narratorData={
   "error2":[
     "You can't do that now"
   ],
+  "playerIsPoor":[
+    "You spend too much, be careful with your money!",
+    "Here is $$$200"
+  ],
   "phase00":[
     "Oh! \\o/ Finally someone is here \\o/! Wait wait wait!",
     "Please just listen to me",
@@ -282,4 +288,4 @@ const narratorData={
 
 // STORY TRIGGER DATA ============================
 
-const storyProgressBarCheckpoint=[0,0.18,0.25,0.3,0.5,1,2];
+const storyProgressBarCheckpoint=[0,0.18,0.21,0.25,0.35,1,1.5];
