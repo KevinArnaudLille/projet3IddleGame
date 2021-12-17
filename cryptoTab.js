@@ -91,3 +91,40 @@ function sellCryptoC() {
   }
   updateStats();
 }
+
+// Events
+let cryptoABuyButton = $("#cryptoABuyButton");
+cryptoABuyButton.addEventListener("click", () => buyCryptoA());
+cryptoABuyButton.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cryptoASellButton = $("#cryptoASellButton");
+cryptoASellButton.addEventListener("click", () => sellCryptoA());
+cryptoASellButton.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cryptoBBuyButton = $("#cryptoBBuyButton");
+cryptoBBuyButton.addEventListener("click", () => buyCryptoB());
+cryptoBBuyButton.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cryptoBSellButton = $("#cryptoBSellButton");
+cryptoBSellButton.addEventListener("click", () => sellCryptoB());
+cryptoBSellButton.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cryptoCBuyButton = $("#cryptoCBuyButton");
+cryptoCBuyButton.addEventListener("click", () => buyCryptoC());
+cryptoCBuyButton.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cryptoCSellButton = $("#cryptoCSellButton");
+cryptoCSellButton.addEventListener("click", () => sellCryptoC());
+cryptoCSellButton.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});

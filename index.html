@@ -53,28 +53,28 @@
     <div id="taskBoard" class="taskboardLayoutSetup">
       <div id="tabsContainer">
         <div id="tabsButtons">
-          <button class="tabLinks" onclick="openTabs(event, `Shop`)" id="cryptoShopBtn">
+          <button class="tabLinks"  id="shopTabBtn">
             Shop
           </button>
-          <button class="tabLinks" onclick="openTabs(event, `Crypto`)" id="cryptoTabBtn">
+          <button class="tabLinks"  id="cryptoTabBtn">
             Crypto
           </button>
-          <button class="tabLinks" onclick="openTabs(event, `Task`)" id="taskTabBtn">
+          <button class="tabLinks"  id="taskTabBtn">
             Task
           </button>
-          <button class="tabLinks" onclick="openTabs(event, `Stats`)" id="statsTabBtn">
+          <button class="tabLinks"  id="statsTabBtn">
             Stats
           </button>
         </div>
         <div id="tabsContents">
           <div id="Shop" class="tabContent">
             <div id="subShopA">
-              <button class="shopBuyable" onclick="updatePCPower('item0')" id="item0"></button>
-              <button class="shopBuyable" onclick="updatePCPower('item1')" id="item1"></button>
+              <button class="shopBuyable" id="item0"></button>
+              <button class="shopBuyable"  id="item1"></button>
             </div>
             <div id="subShopB">
-              <button class="shopBuyable" onclick="updatePCPower('item2')" id="item2"></button>
-              <button class="shopBuyable" onclick="updatePCPower('item3')" id="item3"></button>
+              <button class="shopBuyable"  id="item2"></button>
+              <button class="shopBuyable"  id="item3"></button>
             </div>
           </div>
           <div id="Crypto" class="tabContent">
@@ -96,12 +96,12 @@
                   <td id="cryptoAMedVal"></td>
                   <td id="cryptoAMaxVal"></td>
                   <td id="cryptoABuyCell">
-                    <button id="cryptoABuyButton" onclick="buyCryptoA()">
+                    <button id="cryptoABuyButton">
                       BUY
                     </button>
                   </td>
                   <td id="cryptoASellCell">
-                    <button id="cryptoASellButton" onclick="sellCryptoA()">
+                    <button id="cryptoASellButton">
                       SELL
                     </button>
                   </td>
@@ -113,12 +113,12 @@
                   <td id="cryptoBMedVal"></td>
                   <td id="cryptoBMaxVal"></td>
                   <td id="cryptoBBuyCell">
-                    <button id="cryptoBBuyButton" onclick="buyCryptoB()">
+                    <button id="cryptoBBuyButton">
                       BUY
                     </button>
                   </td>
                   <td id="cryptoBSellCell">
-                    <button id="cryptoBSellButton" onclick="sellCryptoB()">
+                    <button id="cryptoBSellButton">
                       SELL
                     </button>
                   </td>
@@ -130,12 +130,12 @@
                   <td id="cryptoCMedVal"></td>
                   <td id="cryptoCMaxVal"></td>
                   <td id="cryptoCBuyCell">
-                    <button id="cryptoCBuyButton" onclick="buyCryptoC()">
+                    <button id="cryptoCBuyButton">
                       BUY
                     </button>
                   </td>
                   <td id="cryptoCSellCell">
-                    <button id="cryptoCSellButton" onclick="sellCryptoC()">
+                    <button id="cryptoCSellButton">
                       SELL
                     </button>
                   </td>
@@ -147,7 +147,7 @@
             <div id="taskContainer">
               <div id="merchendisesToSendDescription"></div>
               <div id="sendAndReward">
-                <button id="sendMerchendisesBtn" onclick="sendMerchendises()">
+                <button id="sendMerchendisesBtn">
                   SEND
                 </button>
                 <span id="taskReward"></span>
@@ -155,14 +155,14 @@
               <div id="packagingItemsCurrentNb"></div>
               <div id="packagingContainer">
                 <div id="basicPackaging">
-                  <button class="basicPackagingBtn" id="cardboardBtn" onclick="buyCardboard()"></button>
-                  <button class="basicPackagingBtn" id="bubbleWrapBtn" onclick="buyBubbleWrap()"></button>
-                  <button class="basicPackagingBtn" id="canBtn" onclick="buyCan()"></button>
-                  <button class="basicPackagingBtn" id="bottleBtn" onclick="buyBottle()"></button>
+                  <button class="basicPackagingBtn" id="cardboardBtn"></button>
+                  <button class="basicPackagingBtn" id="bubbleWrapBtn"></button>
+                  <button class="basicPackagingBtn" id="canBtn"></button>
+                  <button class="basicPackagingBtn" id="bottleBtn"></button>
                 </div>
                 <div id="combinedPackaging">
-                  <button class="combinedPackaging" id="boxBtn" onclick="buyBox()"></button>
-                  <button class="combinedPackaging" id="caseBtn" onclick="buyCase()"></button>
+                  <button class="combinedPackaging" id="boxBtn"></button>
+                  <button class="combinedPackaging" id="caseBtn"></button>
                 </div>
               </div>
             </div>

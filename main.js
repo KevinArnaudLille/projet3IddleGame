@@ -45,3 +45,28 @@ function launchCryptoDisplay() {
 function launchTaskDisplay() {
   $("#taskTabBtn").style.display = "inline";
 }
+
+// Events
+let shopTabBtn = $("#shopTabBtn");
+shopTabBtn.addEventListener("click", (e) => openTabs(e, `Shop`));
+shopTabBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cryptoTabBtn = $("#cryptoTabBtn");
+cryptoTabBtn.addEventListener("click", (e) => openTabs(e, `Crypto`));
+cryptoTabBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let taskTabBtn = $("#taskTabBtn");
+taskTabBtn.addEventListener("click", (e) => openTabs(e, `Task`));
+taskTabBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let statsTabBtn = $("#statsTabBtn");
+statsTabBtn.addEventListener("click", (e) => openTabs(e, `Stats`));
+statsTabBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});

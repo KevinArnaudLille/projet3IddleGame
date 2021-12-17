@@ -113,3 +113,46 @@ function sendMerchendises() {
   updatePackagingNb();
   updateStats();
 }
+
+// Events
+let sendMerchendisesBtn = $("#sendMerchendisesBtn");
+sendMerchendisesBtn.addEventListener("click", () => sendMerchendises());
+sendMerchendisesBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let cardboardBtn = $("#cardboardBtn");
+cardboardBtn.addEventListener("click", () => buyCardboard());
+cardboardBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let bubbleWrapBtn = $("#bubbleWrapBtn");
+bubbleWrapBtn.addEventListener("click", () => buyBubbleWrap());
+bubbleWrapBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let canBtn = $("#canBtn");
+canBtn.addEventListener("click", () => buyCan());
+canBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let bottleBtn = $("#bottleBtn");
+bottleBtn.addEventListener("click", () => buyBottle());
+bottleBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let boxBtn = $("#boxBtn");
+boxBtn.addEventListener("click", () => buyBox());
+boxBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});
+
+let caseBtn = $("#caseBtn");
+caseBtn.addEventListener("click", () => buyCase());
+caseBtn.addEventListener("keypress", (e) => {
+  e.preventDefault();
+});

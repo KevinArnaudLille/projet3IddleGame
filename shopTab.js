@@ -13,3 +13,12 @@ function updatePCPower(itemId){
   }
   updateStats();
 }
+
+// Events
+for (let item of ["item0","item1","item2","item3"]){
+  let btn = $(`#${item}`);
+  btn.addEventListener("click", (e) => updatePCPower(`${item}`));
+  btn.addEventListener("keypress", (e) => {
+    e.preventDefault();
+  });
+}
