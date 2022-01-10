@@ -288,4 +288,4 @@ const narratorData={
 
 // STORY TRIGGER DATA ============================
 
-const storyProgressBarCheckpoint=[0,0.18,0.21,0.25,0.35,1,1.5];
+const storyProgressBarCheckpoint=[0,0.1,0.15,0.2,0.3,0.6,1];
